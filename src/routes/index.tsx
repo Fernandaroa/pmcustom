@@ -83,8 +83,8 @@ function Index() {
             <div className="mt-2 text-white">PMCustom · pmcustom.cl</div>
           </div>
           <div>
-            <div className="text-xs tracking-widest uppercase text-white/40">Referencias</div>
-            <div className="mt-2 text-white">zetta-joule.com · renaudigital.com</div>
+            <div className="text-xs tracking-widest uppercase text-white/40">​</div>
+            <div className="mt-2 text-white">​</div>
           </div>
           <div>
             <div className="text-xs tracking-widest uppercase text-white/40">Objetivo</div>
