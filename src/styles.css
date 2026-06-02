@@ -65,13 +65,13 @@
    ============================================================ */
 /* PMCustom corporate palette — deep navy + indigo + periwinkle */
 .theme-p1 {
-  --p1-cream: oklch(0.14 0.04 275);        /* deep navy bg */
-  --p1-paper: oklch(0.18 0.05 272);        /* slightly raised surface */
-  --p1-ink: oklch(0.96 0.012 270);         /* near-white text */
-  --p1-ink-soft: oklch(0.75 0.04 275);     /* muted lavender text */
-  --p1-rule: oklch(0.30 0.06 272);         /* subtle divider */
-  --p1-accent: oklch(0.78 0.13 280);       /* periwinkle highlight */
-  --p1-deep: oklch(0.55 0.18 278);         /* indigo */
+  --p1-cream: oklch(0.985 0.004 270);      /* near-white bg */
+  --p1-paper: oklch(0.16 0.045 272);       /* deep navy surface for hero/CTAs */
+  --p1-ink: oklch(0.18 0.05 272);          /* navy text */
+  --p1-ink-soft: oklch(0.48 0.04 272);     /* secondary text */
+  --p1-rule: oklch(0.90 0.012 272);        /* light divider */
+  --p1-accent: oklch(0.55 0.18 278);       /* indigo highlight */
+  --p1-deep: oklch(0.18 0.05 272);         /* navy deep */
 
   background-color: var(--p1-cream);
   color: var(--p1-ink);
