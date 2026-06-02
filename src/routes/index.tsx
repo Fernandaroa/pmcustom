@@ -48,7 +48,7 @@ function Index() {
                 </div>
                 <div>
                   <h2 className="text-4xl md:text-5xl" style={{ fontFamily: "Instrument Serif, serif", letterSpacing: "-0.02em" }}>
-                    Cinemática <em className="italic">oscura</em>
+                    Cinemática <em className="italic">editorial</em>
                   </h2>
                   <p className="mt-3 text-sm text-white/70 max-w-sm">{t("p1Tag")}</p>
                 </div>
@@ -68,7 +68,7 @@ function Index() {
                 </div>
                 <div>
                   <h2 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ fontFamily: "Space Grotesk, sans-serif", letterSpacing: "-0.03em" }}>
-                    Light<br/>engineering
+                    Photo<br/>engineering
                   </h2>
                   <p className="mt-3 text-sm text-white/70 max-w-sm">{t("p2Tag")}</p>
                 </div>
