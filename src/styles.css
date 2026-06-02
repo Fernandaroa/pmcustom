@@ -63,14 +63,15 @@
    PROPUESTA 1 — Cinemática Editorial (inspirada en ZettaJoule)
    Crema + fotografía full-bleed + serif italic + premium
    ============================================================ */
+/* PMCustom corporate palette — deep navy + indigo + periwinkle */
 .theme-p1 {
-  --p1-cream: oklch(0.96 0.012 85);
-  --p1-paper: oklch(0.99 0.005 85);
-  --p1-ink: oklch(0.18 0.015 255);
-  --p1-ink-soft: oklch(0.45 0.02 255);
-  --p1-rule: oklch(0.85 0.015 80);
-  --p1-accent: oklch(0.62 0.16 35);
-  --p1-deep: oklch(0.22 0.04 240);
+  --p1-cream: oklch(0.14 0.04 275);        /* deep navy bg */
+  --p1-paper: oklch(0.18 0.05 272);        /* slightly raised surface */
+  --p1-ink: oklch(0.96 0.012 270);         /* near-white text */
+  --p1-ink-soft: oklch(0.75 0.04 275);     /* muted lavender text */
+  --p1-rule: oklch(0.30 0.06 272);         /* subtle divider */
+  --p1-accent: oklch(0.78 0.13 280);       /* periwinkle highlight */
+  --p1-deep: oklch(0.55 0.18 278);         /* indigo */
 
   background-color: var(--p1-cream);
   color: var(--p1-ink);
@@ -175,14 +176,15 @@
    PROPUESTA 2 — Black Engineering (inspirada en Renau)
    Negro puro + sans display blanco + acento menta + ilustración técnica
    ============================================================ */
+/* Propuesta 2 — Light variant with PMCustom corporate accents */
 .theme-p2 {
-  --p2-black: oklch(0.08 0 0);
-  --p2-ink: oklch(0.13 0 0);
-  --p2-surface: oklch(0.16 0 0);
-  --p2-white: oklch(0.98 0 0);
-  --p2-muted: oklch(0.6 0 0);
-  --p2-line: oklch(0.25 0 0);
-  --p2-mint: oklch(0.88 0.18 165);
+  --p2-black: oklch(0.97 0.008 270);       /* warm off-white bg */
+  --p2-ink: oklch(1 0 0);                  /* card surface */
+  --p2-surface: oklch(0.94 0.012 270);     /* secondary surface */
+  --p2-white: oklch(0.18 0.05 272);        /* deep navy text (kept var name) */
+  --p2-muted: oklch(0.48 0.04 272);        /* secondary text */
+  --p2-line: oklch(0.88 0.02 272);         /* border */
+  --p2-mint: oklch(0.55 0.18 278);         /* indigo primary accent (kept var name) */
 
   background-color: var(--p2-black);
   color: var(--p2-white);
@@ -256,8 +258,8 @@
 
 .theme-p2 .p2-grid-bg {
   background-image:
-    linear-gradient(oklch(0.18 0 0) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.18 0 0) 1px, transparent 1px);
+    linear-gradient(oklch(0.90 0.015 272) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.90 0.015 272) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
