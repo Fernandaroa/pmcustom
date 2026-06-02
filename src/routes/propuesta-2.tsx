@@ -57,8 +57,13 @@ function Proposal2() {
             </div>
           </div>
           <div className="relative">
-            <img src={deviceSketch} alt="Controlador IoT EC-2000 diseñado por PMCustom" className="w-full h-auto" width={1600} height={1280} />
-          </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[var(--p2-line)]">
+              <img src={heroIndustrial} alt="Hardware embebido fabricado por PMCustom" className="absolute inset-0 w-full h-full object-cover" width={1600} height={2000} />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono tracking-widest uppercase text-white/90 backdrop-blur-sm bg-black/30 rounded-md px-3 py-2">
+                <span>EC-2000 · Field Unit</span>
+                <span className="text-[var(--p2-mint)]">● live</span>
+              </div>
+            </div>
         </div>
       </section>
 
