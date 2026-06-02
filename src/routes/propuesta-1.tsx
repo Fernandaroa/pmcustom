@@ -120,7 +120,7 @@ function Proposal1() {
               </h3>
               <p className="mt-2 text-sm uppercase tracking-[0.2em] text-[var(--p1-ink-soft)]">{t("iotSub")}</p>
               <p className="mt-8 text-lg text-[var(--p1-ink-soft)] leading-relaxed">{t("iotDesc")}</p>
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-8 space-y-3 text-slate-50">
                 {[
                   "Integración de sensores en terreno",
                   "Gateways edge personalizados",
@@ -154,7 +154,7 @@ function Proposal1() {
               </h3>
               <p className="mt-2 text-sm uppercase tracking-[0.2em] text-[var(--p1-ink-soft)]">{t("idSub")}</p>
               <p className="mt-8 text-lg text-[var(--p1-ink-soft)] leading-relaxed">{t("idDesc")}</p>
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-8 space-y-3 text-slate-50">
                 {[
                   "Investigación con método científico",
                   "Prototipado y pruebas en campo",
