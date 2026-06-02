@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch, ProposalSwitcher } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
-import deviceSketch from "@/assets/device-sketch.png";
-import networkSketch from "@/assets/network-sketch.png";
+import heroIndustrial from "@/assets/hero-industrial.jpg";
+import dashboardRoom from "@/assets/dashboard-room.jpg";
+import industryAerial from "@/assets/industry-aerial.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
 
 export const Route = createFileRoute("/propuesta-2")({
@@ -56,7 +57,13 @@ function Proposal2() {
             </div>
           </div>
           <div className="relative">
-            <img src={deviceSketch} alt="Controlador IoT EC-2000 diseñado por PMCustom" className="w-full h-auto" width={1600} height={1280} />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[var(--p2-line)]">
+              <img src={heroIndustrial} alt="Hardware embebido fabricado por PMCustom" className="absolute inset-0 w-full h-full object-cover" width={1600} height={2000} />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono tracking-widest uppercase text-white/90 backdrop-blur-sm bg-black/30 rounded-md px-3 py-2">
+                <span>EC-2000 · Field Unit</span>
+                <span className="text-[var(--p2-mint)]">● live</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -130,8 +137,13 @@ function Proposal2() {
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[var(--p2-muted)] leading-relaxed">{t("cycleDesc")}</p>
 
-          <div className="mt-16 rounded-2xl border border-[var(--p2-line)] bg-[var(--p2-ink)] p-6 md:p-10">
-            <img src={networkSketch} alt="Arquitectura de red IoT PMCustom" className="w-full h-auto" loading="lazy" width={1920} height={1280} />
+          <div className="mt-16 grid md:grid-cols-2 gap-4">
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src={dashboardRoom} alt="Sala de control con dashboards en tiempo real" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src={industryAerial} alt="Planta industrial monitoreada por sistemas PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+            </div>
           </div>
 
           <div className="mt-12 grid md:grid-cols-4 gap-4">
