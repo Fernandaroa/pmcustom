@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch, ProposalSwitcher } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
-import deviceSketch from "@/assets/device-sketch.png";
-import networkSketch from "@/assets/network-sketch.png";
+import heroIndustrial from "@/assets/hero-industrial.jpg";
+import dashboardRoom from "@/assets/dashboard-room.jpg";
+import industryAerial from "@/assets/industry-aerial.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
 
 export const Route = createFileRoute("/propuesta-2")({
