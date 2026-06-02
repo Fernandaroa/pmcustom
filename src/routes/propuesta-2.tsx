@@ -137,8 +137,13 @@ function Proposal2() {
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[var(--p2-muted)] leading-relaxed">{t("cycleDesc")}</p>
 
-          <div className="mt-16 rounded-2xl border border-[var(--p2-line)] bg-[var(--p2-ink)] p-6 md:p-10">
-            <img src={networkSketch} alt="Arquitectura de red IoT PMCustom" className="w-full h-auto" loading="lazy" width={1920} height={1280} />
+          <div className="mt-16 grid md:grid-cols-2 gap-4">
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src={dashboardRoom} alt="Sala de control con dashboards en tiempo real" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src={industryAerial} alt="Planta industrial monitoreada por sistemas PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+            </div>
           </div>
 
           <div className="mt-12 grid md:grid-cols-4 gap-4">
