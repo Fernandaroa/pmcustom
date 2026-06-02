@@ -64,6 +64,7 @@ function Proposal2() {
                 <span className="text-[var(--p2-mint)]">● live</span>
               </div>
             </div>
+          </div>
         </div>
       </section>
 
