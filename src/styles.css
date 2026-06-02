@@ -258,8 +258,8 @@
 
 .theme-p2 .p2-grid-bg {
   background-image:
-    linear-gradient(oklch(0.18 0 0) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.18 0 0) 1px, transparent 1px);
+    linear-gradient(oklch(0.90 0.015 272) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.90 0.015 272) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
