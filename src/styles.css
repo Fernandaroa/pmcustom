@@ -63,14 +63,15 @@
    PROPUESTA 1 — Cinemática Editorial (inspirada en ZettaJoule)
    Crema + fotografía full-bleed + serif italic + premium
    ============================================================ */
+/* PMCustom corporate palette — deep navy + indigo + periwinkle */
 .theme-p1 {
-  --p1-cream: oklch(0.96 0.012 85);
-  --p1-paper: oklch(0.99 0.005 85);
-  --p1-ink: oklch(0.18 0.015 255);
-  --p1-ink-soft: oklch(0.45 0.02 255);
-  --p1-rule: oklch(0.85 0.015 80);
-  --p1-accent: oklch(0.62 0.16 35);
-  --p1-deep: oklch(0.22 0.04 240);
+  --p1-cream: oklch(0.14 0.04 275);        /* deep navy bg */
+  --p1-paper: oklch(0.18 0.05 272);        /* slightly raised surface */
+  --p1-ink: oklch(0.96 0.012 270);         /* near-white text */
+  --p1-ink-soft: oklch(0.75 0.04 275);     /* muted lavender text */
+  --p1-rule: oklch(0.30 0.06 272);         /* subtle divider */
+  --p1-accent: oklch(0.78 0.13 280);       /* periwinkle highlight */
+  --p1-deep: oklch(0.55 0.18 278);         /* indigo */
 
   background-color: var(--p1-cream);
   color: var(--p1-ink);
