@@ -176,14 +176,15 @@
    PROPUESTA 2 — Black Engineering (inspirada en Renau)
    Negro puro + sans display blanco + acento menta + ilustración técnica
    ============================================================ */
+/* Propuesta 2 — Light variant with PMCustom corporate accents */
 .theme-p2 {
-  --p2-black: oklch(0.08 0 0);
-  --p2-ink: oklch(0.13 0 0);
-  --p2-surface: oklch(0.16 0 0);
-  --p2-white: oklch(0.98 0 0);
-  --p2-muted: oklch(0.6 0 0);
-  --p2-line: oklch(0.25 0 0);
-  --p2-mint: oklch(0.88 0.18 165);
+  --p2-black: oklch(0.97 0.008 270);       /* warm off-white bg */
+  --p2-ink: oklch(1 0 0);                  /* card surface */
+  --p2-surface: oklch(0.94 0.012 270);     /* secondary surface */
+  --p2-white: oklch(0.18 0.05 272);        /* deep navy text (kept var name) */
+  --p2-muted: oklch(0.48 0.04 272);        /* secondary text */
+  --p2-line: oklch(0.88 0.02 272);         /* border */
+  --p2-mint: oklch(0.55 0.18 278);         /* indigo primary accent (kept var name) */
 
   background-color: var(--p2-black);
   color: var(--p2-white);
