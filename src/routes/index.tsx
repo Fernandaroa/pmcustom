@@ -17,10 +17,10 @@ export const Route = createFileRoute("/")({
 function Index() {
   const { t } = useI18n();
   return (
-    <div className="min-h-screen bg-[oklch(0.08_0_0)] text-white">
+    <div className="min-h-screen bg-[oklch(0.10_0.04_275)] text-white">
       <header className="flex items-center justify-between px-6 md:px-12 py-6 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <span className="w-2 h-2 rounded-full bg-[oklch(0.88_0.18_165)]" />
+          <span className="w-2 h-2 rounded-full bg-[oklch(0.78_0.13_280)]" />
           <span className="font-mono text-sm tracking-[0.2em] uppercase">PMCustom</span>
         </div>
         <span className="text-xs uppercase tracking-widest text-white/40 hidden md:block">Client preview · v2.0</span>
@@ -32,7 +32,7 @@ function Index() {
         <h1 className="mt-6 text-5xl md:text-7xl font-normal leading-[1] max-w-4xl"
             style={{ fontFamily: "Instrument Serif, serif", letterSpacing: "-0.02em" }}>
           {t("chooseTitle").split(" ").slice(0, 2).join(" ")}{" "}
-          <em className="italic text-[oklch(0.88_0.18_165)]">{t("chooseTitle").split(" ").slice(2).join(" ")}</em>
+          <em className="italic text-[oklch(0.78_0.13_280)]">{t("chooseTitle").split(" ").slice(2).join(" ")}</em>
         </h1>
 
         <div className="mt-16 grid md:grid-cols-2 gap-6">
@@ -48,7 +48,7 @@ function Index() {
                 </div>
                 <div>
                   <h2 className="text-4xl md:text-5xl" style={{ fontFamily: "Instrument Serif, serif", letterSpacing: "-0.02em" }}>
-                    Cinemática <em className="italic">editorial</em>
+                    Cinemática <em className="italic">oscura</em>
                   </h2>
                   <p className="mt-3 text-sm text-white/70 max-w-sm">{t("p1Tag")}</p>
                 </div>
@@ -63,12 +63,12 @@ function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs tracking-widest uppercase font-mono text-[oklch(0.88_0.18_165)]">02 / Engineering</span>
+                  <span className="text-xs tracking-widest uppercase font-mono text-[oklch(0.78_0.13_280)]">02 / Light Engineering</span>
                   <span className="text-xs tracking-widest uppercase opacity-70">→</span>
                 </div>
                 <div>
                   <h2 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ fontFamily: "Space Grotesk, sans-serif", letterSpacing: "-0.03em" }}>
-                    Black<br/>engineering
+                    Light<br/>engineering
                   </h2>
                   <p className="mt-3 text-sm text-white/70 max-w-sm">{t("p2Tag")}</p>
                 </div>
