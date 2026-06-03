@@ -26,6 +26,16 @@ export function LangSwitch({ variant }: { variant: "p1" | "p2" }) {
   );
 }
 
-export function ProposalSwitcher(_: { current?: 1 | 2 }) {
-  return null;
+export function ProposalSwitcher({ current }: { current?: 1 | 2 }) {
+  const other = current === 1 ? 2 : 1;
+  return (
+    <div className="fixed bottom-5 right-5 z-50">
+      <Link
+        to={other === 1 ? "/propuesta-1" : "/propuesta-2"}
+        className="inline-flex items-center gap-2 rounded-full bg-black/85 backdrop-blur px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg hover:bg-black"
+      >
+        Ver Propuesta 0{other} →
+      </Link>
+    </div>
+  );
 }
