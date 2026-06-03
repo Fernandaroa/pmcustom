@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch, ProposalSwitcher } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
+import { ParallaxImage } from "@/components/parallax-image";
 import heroIndustrial from "@/assets/hero-industrial.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
