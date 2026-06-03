@@ -25,12 +25,13 @@ function Proposal1() {
     <div className="theme-p1 min-h-screen">
       {/* ============= HERO full-bleed cinemático ============= */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden text-white">
-        <img
+        <ParallaxImage
           src={heroIndustrial}
           alt="Planta industrial al atardecer monitoreada por sensores PMCustom"
-          className="absolute inset-0 w-full h-full object-cover p1-kenburns"
+          className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
+          speed={0.35}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/85" />
 
