@@ -55,7 +55,7 @@ function Proposal1() {
         </header>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 absolute-center pt-24 md:pt-32">
-          <p className="p1-eyebrow text-white/80">{t("heroKicker")}</p>
+          <p className="p1-eyebrow text-white">{t("heroKicker")}</p>
           <h1 className="mt-8 p1-display text-5xl md:text-7xl lg:text-[7.5rem] max-w-5xl">
             Sistemas que convierten <em>datos</em> en <em>decisiones</em>.
           </h1>
