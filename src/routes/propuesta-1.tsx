@@ -103,7 +103,7 @@ function Proposal1() {
           ].map((s) => (
             <div key={s.l} className="bg-[var(--p1-paper)] p-8">
               <div className="p1-stat-num text-[var(--p1-ink)]">
-                <em className="italic text-[var(--p1-accent)] font-serif" style={{ fontStyle: "italic" }}>{s.n}</em>
+                <em className="italic text-[var(--p1-accent)] font-sans" style={{ fontStyle: "italic" }}>{s.n}</em>
               </div>
               <div className="mt-3 p1-eyebrow">{s.l}</div>
             </div>
