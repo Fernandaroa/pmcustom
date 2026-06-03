@@ -68,7 +68,7 @@ function Proposal2() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
           <div className="flex items-center gap-10">
             <img src={pmcustomLogo.url} alt="PMCustom" className="h-7 w-auto brightness-0 invert" />
-            <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-white/85">
+            <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[var(--p2-white)]/85">
               <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
               <a href="#soluciones" className="hover:text-[var(--p2-green)]">Soluciones</a>
               <a href="#corfo" className="hover:text-[var(--p2-green)]">CORFO</a>
@@ -116,7 +116,7 @@ function Proposal2() {
             ].map((f) => (
               <a key={f.title} href="#soluciones" className="bg-[var(--p2-black)] p-5 hover:bg-[var(--p2-surface)] transition-colors group">
                 <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">{f.tag}</div>
-                <div className="mt-2 text-sm font-semibold text-white group-hover:text-[var(--p2-green)] leading-snug">{f.title} →</div>
+                <div className="mt-2 text-sm font-semibold text-[var(--p2-white)] group-hover:text-[var(--p2-green)] leading-snug">{f.title} →</div>
               </a>
             ))}
           </div>
@@ -129,7 +129,7 @@ function Proposal2() {
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
               <div className="p2-eyebrow">Soluciones</div>
-              <h2 className="mt-3 p2-display text-3xl md:text-5xl text-white">
+              <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
                 Tecnología a medida para <span className="text-[var(--p2-green)]">cada proceso productivo</span>.
               </h2>
             </div>
@@ -154,11 +154,11 @@ function Proposal2() {
               <img src={active.img} alt={active.title} className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div>
-              <h3 className="p2-display text-3xl md:text-4xl text-white">{active.title}</h3>
-              <p className="mt-5 text-base text-white/75 leading-relaxed">{active.desc}</p>
+              <h3 className="p2-display text-3xl md:text-4xl text-[var(--p2-white)]">{active.title}</h3>
+              <p className="mt-5 text-base text-[var(--p2-white)]/75 leading-relaxed">{active.desc}</p>
               <ul className="mt-7 grid sm:grid-cols-2 gap-3">
                 {active.points.map((p) => (
-                  <li key={p} className="flex gap-2 text-sm text-white/85">
+                  <li key={p} className="flex gap-2 text-sm text-[var(--p2-white)]/85">
                     <span className="text-[var(--p2-green)] font-bold">▸</span>
                     <span>{p}</span>
                   </li>
@@ -174,7 +174,7 @@ function Proposal2() {
       <section id="productos" className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="p2-eyebrow">Otros Servicios</div>
-          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-white max-w-3xl">
+          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
             Un equipo completo, <span className="text-[var(--p2-green)]">bajo un mismo techo</span>.
           </h2>
 
@@ -187,8 +187,8 @@ function Proposal2() {
             ].map((s, i) => (
               <div key={i} className="p2-card p-6">
                 <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">0{i + 1}</div>
-                <h4 className="mt-4 text-lg font-bold text-white">{s.t}</h4>
-                <p className="mt-3 text-sm text-white/65 leading-relaxed">{s.d}</p>
+                <h4 className="mt-4 text-lg font-bold text-[var(--p2-white)]">{s.t}</h4>
+                <p className="mt-3 text-sm text-[var(--p2-white)]/65 leading-relaxed">{s.d}</p>
                 <div className="mt-6 text-xs font-semibold text-[var(--p2-green)]">Conocer más →</div>
               </div>
             ))}
@@ -203,25 +203,25 @@ function Proposal2() {
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
           <div>
             <div className="p2-eyebrow">{t("corfoKicker")}</div>
-            <h2 className="mt-4 p2-display text-3xl md:text-5xl text-white">
+            <h2 className="mt-4 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
               {t("corfoTitle")} <span className="text-[var(--p2-green)]">con PMCustom</span>.
             </h2>
-            <p className="mt-6 text-base text-white/80 leading-relaxed max-w-xl">{t("corfoDesc")}</p>
+            <p className="mt-6 text-base text-[var(--p2-white)]/80 leading-relaxed max-w-xl">{t("corfoDesc")}</p>
             <a href="#contacto" className="mt-8 inline-flex p2-btn">Evaluar mi proyecto →</a>
           </div>
           <div className="grid gap-5 self-center">
             <div className="p2-card p-6">
               <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">Etapa 01</div>
-              <h4 className="mt-3 text-xl font-bold text-white">{t("corfoStep1")}</h4>
-              <ul className="mt-4 space-y-2 text-sm text-white/75">
+              <h4 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{t("corfoStep1")}</h4>
+              <ul className="mt-4 space-y-2 text-sm text-[var(--p2-white)]/75">
                 <li className="flex gap-2"><span className="text-[var(--p2-green)]">▸</span>{t("corfoStep1a")}</li>
                 <li className="flex gap-2"><span className="text-[var(--p2-green)]">▸</span>{t("corfoStep1b")}</li>
               </ul>
             </div>
             <div className="p2-card p-6">
               <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">Etapa 02</div>
-              <h4 className="mt-3 text-xl font-bold text-white">{t("corfoStep2")}</h4>
-              <ul className="mt-4 space-y-2 text-sm text-white/75">
+              <h4 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{t("corfoStep2")}</h4>
+              <ul className="mt-4 space-y-2 text-sm text-[var(--p2-white)]/75">
                 <li className="flex gap-2"><span className="text-[var(--p2-green)]">▸</span>{t("corfoStep2a")}</li>
               </ul>
             </div>
@@ -233,10 +233,10 @@ function Proposal2() {
       <section id="proceso" className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="p2-eyebrow">Proceso</div>
-          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-white max-w-3xl">
+          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
             {t("cycleKicker").replace("PMCustom", "")} <span className="text-[var(--p2-green)]">PMCustom</span>.
           </h2>
-          <p className="mt-6 text-base text-white/70 max-w-3xl leading-relaxed">{t("cycleDesc")}</p>
+          <p className="mt-6 text-base text-[var(--p2-white)]/70 max-w-3xl leading-relaxed">{t("cycleDesc")}</p>
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
             {[
@@ -247,8 +247,8 @@ function Proposal2() {
             ].map((s) => (
               <div key={s.i} className="bg-[var(--p2-black)] p-7">
                 <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{s.i}</div>
-                <h4 className="mt-5 text-xl font-bold text-white">{s.t}</h4>
-                <p className="mt-3 text-sm text-white/65 leading-relaxed">{s.d}</p>
+                <h4 className="mt-5 text-xl font-bold text-[var(--p2-white)]">{s.t}</h4>
+                <p className="mt-3 text-sm text-[var(--p2-white)]/65 leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
@@ -260,18 +260,18 @@ function Proposal2() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20">
           <div>
             <div className="p2-eyebrow">{t("contactKicker")}</div>
-            <h2 className="mt-4 p2-display text-3xl md:text-5xl text-white">
+            <h2 className="mt-4 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
               Cuéntanos tu <span className="text-[var(--p2-green)]">proyecto</span>.
             </h2>
-            <p className="mt-5 text-base text-white/75">{t("contactDesc")}</p>
+            <p className="mt-5 text-base text-[var(--p2-white)]/75">{t("contactDesc")}</p>
             <div className="mt-10 space-y-5 text-sm">
               <div>
                 <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">Email</div>
-                <div className="mt-1 text-white">contacto@pmcustom.cl</div>
+                <div className="mt-1 text-[var(--p2-white)]">contacto@pmcustom.cl</div>
               </div>
               <div>
                 <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">Ubicación</div>
-                <div className="mt-1 text-white">Valparaíso · Chile</div>
+                <div className="mt-1 text-[var(--p2-white)]">Valparaíso · Chile</div>
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@ function Proposal2() {
         </div>
       </section>
 
-      <footer className="px-6 lg:px-10 py-8 border-t border-[var(--p2-line)] bg-[var(--p2-black)] flex flex-col md:flex-row items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+      <footer className="px-6 lg:px-10 py-8 border-t border-[var(--p2-line)] bg-[var(--p2-black)] flex flex-col md:flex-row items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-[var(--p2-white)]/50">
         <span>{t("footer")}</span>
         <span>proposal 02 — corporate tech</span>
       </footer>
