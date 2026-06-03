@@ -72,7 +72,7 @@ function Proposal1() {
 
         <div className="absolute bottom-8 left-6 md:left-12 right-6 md:right-12 z-10 flex items-end justify-between text-white/70 text-xs uppercase tracking-[0.2em]">
           <span>↓ Scroll</span>
-          <span className="hidden md:block">Concepción · Chile</span>
+          <span className="hidden md:block">Valparaíso · Chile</span>
         </div>
       </section>
 
