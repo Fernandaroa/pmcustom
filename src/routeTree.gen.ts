@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Propuesta2RouteImport } from './routes/propuesta-2'
 import { Route as Propuesta1RouteImport } from './routes/propuesta-1'
 import { Route as IndexRouteImport } from './routes/index'
 
+const Propuesta2Route = Propuesta2RouteImport.update({
+  id: '/propuesta-2',
+  path: '/propuesta-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Propuesta1Route = Propuesta1RouteImport.update({
   id: '/propuesta-1',
   path: '/propuesta-1',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/propuesta-1': typeof Propuesta1Route
+  '/propuesta-2': typeof Propuesta2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/propuesta-1': typeof Propuesta1Route
+  '/propuesta-2': typeof Propuesta2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/propuesta-1': typeof Propuesta1Route
+  '/propuesta-2': typeof Propuesta2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/propuesta-1'
+  fullPaths: '/' | '/propuesta-1' | '/propuesta-2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/propuesta-1'
-  id: '__root__' | '/' | '/propuesta-1'
+  to: '/' | '/propuesta-1' | '/propuesta-2'
+  id: '__root__' | '/' | '/propuesta-1' | '/propuesta-2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   Propuesta1Route: typeof Propuesta1Route
+  Propuesta2Route: typeof Propuesta2Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/propuesta-2': {
+      id: '/propuesta-2'
+      path: '/propuesta-2'
+      fullPath: '/propuesta-2'
+      preLoaderRoute: typeof Propuesta2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/propuesta-1': {
       id: '/propuesta-1'
       path: '/propuesta-1'
@@ -71,7 +88,18 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   Propuesta1Route: Propuesta1Route,
+  Propuesta2Route: Propuesta2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
