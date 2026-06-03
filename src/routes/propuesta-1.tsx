@@ -7,6 +7,7 @@ import heroIndustrial from "@/assets/hero-industrial.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
+import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
 
 export const Route = createFileRoute("/propuesta-1")({
   head: () => ({
