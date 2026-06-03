@@ -177,7 +177,7 @@ function Proposal1() {
 
       {/* ============= CORFO — full bleed dark ============= */}
       <section id="corfo" className="relative text-white overflow-hidden">
-        <img src={industryAerial} alt="Industria chilena en operación" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={1080} />
+        <ParallaxImage src={industryAerial} alt="Industria chilena en operación" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={1080} speed={0.3} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 grid lg:grid-cols-2 gap-16">
           <div>
