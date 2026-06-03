@@ -7,6 +7,7 @@ import heroIndustrial from "@/assets/hero-industrial.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
+import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
 
 export const Route = createFileRoute("/propuesta-1")({
   head: () => ({
@@ -37,8 +38,7 @@ function Proposal1() {
 
         <header className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
           <div className="flex items-center gap-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-white" />
-            <span className="text-sm tracking-[0.22em] uppercase font-medium">PMCustom</span>
+            <img src={pmcustomLogo.url} alt="PMCustom" className="h-10 w-auto brightness-0 invert" />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-xs tracking-[0.18em] uppercase text-white/80">
             <a href="#servicios" className="hover:text-white">Servicios</a>
