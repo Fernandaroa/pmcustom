@@ -288,7 +288,7 @@ function Proposal1() {
               </div>
               <div>
                 <div className="p1-eyebrow">Ubicación</div>
-                <div className="mt-1 text-[var(--p1-ink)]">Chile</div>
+                <div className="mt-1 text-[var(--p1-ink)]">Valparaíso - Chile</div>
               </div>
             </div>
           </div>
