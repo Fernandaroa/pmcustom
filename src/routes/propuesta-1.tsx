@@ -148,7 +148,7 @@ function Proposal1() {
           <p className="p1-eyebrow">02 / R+D</p>
           <div className="mt-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={dashboardRoom} alt="Dashboard de monitoreo desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+              <ParallaxImage src={dashboardRoom} alt="Dashboard de monitoreo desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
             </div>
             <div>
               <h3 className="p1-display text-4xl md:text-6xl">
