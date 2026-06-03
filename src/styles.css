@@ -177,19 +177,20 @@
    Negro puro + verde NVIDIA + sans bold + cards grandes
    ============================================================ */
 .theme-p2 {
-  --p2-black: oklch(0.08 0.005 270);       /* near-black bg */
-  --p2-surface: oklch(0.14 0.008 270);     /* card surface */
-  --p2-surface-2: oklch(0.20 0.010 270);   /* secondary surface */
-  --p2-white: oklch(0.98 0 0);             /* primary text */
-  --p2-muted: oklch(0.65 0.012 270);       /* secondary text */
-  --p2-line: oklch(0.25 0.010 270);        /* border */
-  --p2-green: oklch(0.78 0.22 135);        /* NVIDIA green accent */
-  --p2-green-deep: oklch(0.65 0.20 135);
+  --p2-black: oklch(0.985 0.004 270);      /* light cream bg (kept var name) */
+  --p2-surface: oklch(0.965 0.008 270);    /* soft surface */
+  --p2-surface-2: oklch(0.94 0.012 270);   /* secondary surface */
+  --p2-white: oklch(0.18 0.05 272);        /* navy text (kept var name) */
+  --p2-muted: oklch(0.48 0.04 272);        /* secondary text */
+  --p2-line: oklch(0.88 0.018 272);        /* light border */
+  --p2-green: oklch(0.55 0.18 278);        /* indigo accent (kept var name) */
+  --p2-green-deep: oklch(0.42 0.17 278);
 
   background-color: var(--p2-black);
   color: var(--p2-white);
   font-family: var(--font-sans);
 }
+
 
 .theme-p2 .p2-display {
   font-family: var(--font-sans);
@@ -220,7 +221,7 @@
   letter-spacing: 0.01em;
   transition: background 0.2s ease;
 }
-.theme-p2 .p2-btn:hover { background: oklch(0.85 0.22 135); }
+.theme-p2 .p2-btn:hover { background: var(--p2-green-deep); }
 
 .theme-p2 .p2-btn-ghost {
   display: inline-flex;
