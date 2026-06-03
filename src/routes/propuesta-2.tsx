@@ -67,7 +67,7 @@ function Proposal2() {
       <header className="sticky top-0 z-40 bg-[var(--p2-black)]/90 backdrop-blur border-b border-[var(--p2-line)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
           <div className="flex items-center gap-10">
-            <img src={pmcustomLogo.url} alt="PMCustom" className="h-7 w-auto brightness-0 invert" />
+            <img src={pmcustomLogo.url} alt="PMCustom" className="h-7 w-auto" />
             <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[var(--p2-white)]/85">
               <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
               <a href="#soluciones" className="hover:text-[var(--p2-green)]">Soluciones</a>
@@ -198,8 +198,8 @@ function Proposal2() {
 
       {/* ============= CORFO — banner ============= */}
       <section id="corfo" className="relative py-20 md:py-28 overflow-hidden">
-        <img src={industryAerial} alt="Industria chilena" className="absolute inset-0 w-full h-full object-cover opacity-25" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--p2-black)] via-[var(--p2-black)]/95 to-[var(--p2-black)]/70" />
+        <img src={industryAerial} alt="Industria chilena" className="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--p2-black)] via-[var(--p2-black)]/95 to-[var(--p2-black)]/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
           <div>
             <div className="p2-eyebrow">{t("corfoKicker")}</div>
