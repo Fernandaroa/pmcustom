@@ -138,7 +138,7 @@ function Proposal1() {
               <a href="#contacto" className="mt-10 p1-btn inline-flex">Cotizar proyecto IoT →</a>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={circuitMacro} alt="Hardware electrónico desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1280} height={1600} />
+              <ParallaxImage src={circuitMacro} alt="Hardware electrónico desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1280} height={1600} />
             </div>
           </div>
         </div>
