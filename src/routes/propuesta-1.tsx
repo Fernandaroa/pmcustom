@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch, ProposalSwitcher } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
+import { ParallaxImage } from "@/components/parallax-image";
 import heroIndustrial from "@/assets/hero-industrial.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
@@ -24,12 +25,13 @@ function Proposal1() {
     <div className="theme-p1 min-h-screen">
       {/* ============= HERO full-bleed cinemático ============= */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden text-white">
-        <img
+        <ParallaxImage
           src={heroIndustrial}
           alt="Planta industrial al atardecer monitoreada por sensores PMCustom"
-          className="absolute inset-0 w-full h-full object-cover p1-kenburns"
+          className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
+          speed={0.35}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/85" />
 
@@ -136,7 +138,7 @@ function Proposal1() {
               <a href="#contacto" className="mt-10 p1-btn inline-flex">Cotizar proyecto IoT →</a>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={circuitMacro} alt="Hardware electrónico desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1280} height={1600} />
+              <ParallaxImage src={circuitMacro} alt="Hardware electrónico desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1280} height={1600} />
             </div>
           </div>
         </div>
@@ -146,7 +148,7 @@ function Proposal1() {
           <p className="p1-eyebrow">02 / R+D</p>
           <div className="mt-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={dashboardRoom} alt="Dashboard de monitoreo desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
+              <ParallaxImage src={dashboardRoom} alt="Dashboard de monitoreo desarrollado por PMCustom" className="w-full h-full object-cover" loading="lazy" width={1600} height={1200} />
             </div>
             <div>
               <h3 className="p1-display text-4xl md:text-6xl">
@@ -175,7 +177,7 @@ function Proposal1() {
 
       {/* ============= CORFO — full bleed dark ============= */}
       <section id="corfo" className="relative text-white overflow-hidden">
-        <img src={industryAerial} alt="Industria chilena en operación" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={1080} />
+        <ParallaxImage src={industryAerial} alt="Industria chilena en operación" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={1080} speed={0.3} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 grid lg:grid-cols-2 gap-16">
           <div>
