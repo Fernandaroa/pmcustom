@@ -22,6 +22,8 @@ export const Route = createFileRoute("/propuesta-2")({
 function Proposal2() {
   const { t } = useI18n();
   const [tab, setTab] = useState<"iot" | "id" | "dash">("iot");
+  const [openService, setOpenService] = useState<number | null>(null);
+
 
   const tabs = {
     iot: {
