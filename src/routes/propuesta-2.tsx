@@ -182,20 +182,50 @@ function Proposal2() {
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { t: t("otherA"), d: "Diseño de hardware electrónico industrial certificado." },
-              { t: t("otherB"), d: "Interfaces web y aplicaciones de control en tiempo real." },
-              { t: t("otherC"), d: "Conexión con ERPs, APIs y plataformas existentes." },
-              { t: t("otherD"), d: "Infraestructura cloud y on-premise gestionada." },
+              {
+                t: t("otherA"),
+                d: "Diseño de hardware electrónico industrial certificado.",
+                long: "Diseñamos y fabricamos hardware electrónico a medida para entornos industriales exigentes: PCBs multicapa, integración de microcontroladores, sensores y actuadores, con cumplimiento de normativas y certificación CE/FCC cuando corresponde.",
+                bullets: ["Diseño de PCB y firmware embebido", "Prototipado rápido y validación en planta", "Carcasas IP65/IP67 para terreno", "Documentación técnica y certificación"],
+              },
+              {
+                t: t("otherB"),
+                d: "Interfaces web y aplicaciones de control en tiempo real.",
+                long: "Desarrollamos interfaces web y aplicaciones de control que permiten operar, monitorear y configurar tu planta desde cualquier dispositivo, con latencias mínimas y experiencia diseñada para operadores industriales.",
+                bullets: ["SCADA web responsivo", "Control remoto seguro", "Roles y permisos por planta", "Histórico, reportes y exportación"],
+              },
+              {
+                t: t("otherC"),
+                d: "Conexión con ERPs, APIs y plataformas existentes.",
+                long: "Conectamos tu operación con los sistemas que ya usas: ERPs (SAP, Odoo, Defontana), CRMs, APIs internas y servicios de terceros. Sincronización bidireccional, colas de eventos y mapeo de datos a medida.",
+                bullets: ["Integración con SAP/Odoo/Defontana", "Webhooks y APIs REST/GraphQL", "Colas y procesamiento asíncrono", "Mapeo y normalización de datos"],
+              },
+              {
+                t: t("otherD"),
+                d: "Infraestructura cloud y on-premise gestionada.",
+                long: "Operamos tu infraestructura en la nube o en tus servidores locales con SLA definido: monitoreo 24/7, backups, alta disponibilidad y respuesta ante incidentes por nuestro equipo de operaciones.",
+                bullets: ["AWS, GCP, Azure y on-premise", "Monitoreo y alertas 24/7", "Backups y plan de contingencia", "SLA y soporte dedicado"],
+              },
             ].map((s, i) => (
-              <div key={i} className="p2-card p-6">
+              <button
+                key={i}
+                onClick={() => setOpenService(i)}
+                className="p2-card p-6 text-left hover:border-[var(--p2-green)] transition-colors"
+              >
                 <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">0{i + 1}</div>
                 <h4 className="mt-4 text-lg font-bold text-[var(--p2-white)]">{s.t}</h4>
                 <p className="mt-3 text-sm text-[var(--p2-white)]/65 leading-relaxed">{s.d}</p>
                 <div className="mt-6 text-xs font-semibold text-[var(--p2-green)]">Conocer más →</div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
+        <ServiceModal
+          open={openService !== null}
+          onClose={() => setOpenService(null)}
+          service={openService !== null ? servicesData[openService] : null}
+        />
+
       </section>
 
       {/* ============= CORFO — banner ============= */}
