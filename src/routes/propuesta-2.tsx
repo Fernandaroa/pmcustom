@@ -327,3 +327,42 @@ function Proposal2() {
     </div>
   );
 }
+
+function ServiceModal({ open, onClose, service }: { open: boolean; onClose: () => void; service: Service | null }) {
+  if (!open || !service) return null;
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in"
+      onClick={onClose}
+    >
+      <div
+        className="theme-p2 relative max-w-2xl w-full max-h-[85vh] overflow-y-auto bg-[var(--p2-black)] border border-[var(--p2-line)] shadow-2xl p-8 md:p-10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center text-[var(--p2-white)]/60 hover:text-[var(--p2-green)] text-xl"
+          aria-label="Cerrar"
+        >
+          ✕
+        </button>
+        <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">Servicio</div>
+        <h3 className="mt-3 p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{service.t}</h3>
+        <p className="mt-5 text-sm md:text-base text-[var(--p2-white)]/80 leading-relaxed">{service.long}</p>
+        <ul className="mt-7 grid sm:grid-cols-2 gap-3">
+          {service.bullets.map((b) => (
+            <li key={b} className="flex gap-2 text-sm text-[var(--p2-white)]/85">
+              <span className="text-[var(--p2-green)] font-bold">▸</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="#contacto" onClick={onClose} className="p2-btn">Solicitar cotización →</a>
+          <button onClick={onClose} className="p2-btn-ghost">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
