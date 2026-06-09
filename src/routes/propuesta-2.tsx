@@ -137,6 +137,30 @@ function Proposal2() {
           </div>
         </div>
 
+        {/* Marquesina ticker con atributos de la compañía */}
+        <div className="bg-[var(--p2-black)] border-t border-[var(--p2-line)] py-4">
+          <div className="p2-marquee">
+            <div className="p2-marquee-track text-sm md:text-base tracking-[0.18em] uppercase text-[var(--p2-white)]/80 font-semibold">
+              {Array.from({ length: 2 }).flatMap((_, i) =>
+                [
+                  "Innovación",
+                  "Tecnología a medida",
+                  "Sistemas embebidos",
+                  "Soluciones integrales",
+                  "Soporte continuo",
+                  "Calidad garantizada",
+                ].map((attr, j) => (
+                  <span key={`${i}-${j}`} className="inline-flex items-center gap-12">
+                    <span>{attr}</span>
+                    <span className="text-[var(--p2-green)]">◆</span>
+                  </span>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+
+
         {/* Featured strip — NVIDIA-style cards under hero */}
         <div className="bg-[var(--p2-black)] border-t border-[var(--p2-line)]">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-6 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
