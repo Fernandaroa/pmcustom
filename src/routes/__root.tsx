@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PMCustom — Propuestas de sitio web" },
-      { name: "description", content: "Dos propuestas de diseño para PMCustom, tu Partner Tecnológico." },
+      { title: "PMCustom — Tu Partner Tecnológico" },
+      { name: "description", content: "Sistemas IoT, I+D y plataformas industriales a medida. Asesoría CORFO Ley I+D." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

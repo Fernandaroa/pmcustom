@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
-import { LangSwitch, ProposalSwitcher } from "@/components/shared-nav";
+import { LangSwitch } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
 import heroIndustrial from "@/assets/hero-industrial.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
@@ -344,10 +344,7 @@ function Proposal2() {
 
       <footer className="px-6 lg:px-10 py-8 border-t border-[var(--p2-line)] bg-[var(--p2-black)] flex flex-col md:flex-row items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-[var(--p2-white)]/50">
         <span>{t("footer")}</span>
-        <span>proposal 02 — corporate tech</span>
       </footer>
-
-      <ProposalSwitcher current={2} />
     </div>
   );
 }
