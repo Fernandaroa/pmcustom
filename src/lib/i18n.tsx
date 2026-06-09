@@ -24,8 +24,8 @@ const dict: Dict = {
     en: "Embedded systems that turn data into decisions.",
   },
   heroDesc: {
-    es: "PMCustom es una empresa de tecnología especializada en el diseño y desarrollo de sistemas embebidos innovadores. Nuestras soluciones permiten adquirir, centralizar y mostrar información procesada, facilitando la toma de decisiones informadas.",
-    en: "PMCustom designs and develops innovative embedded systems. Our solutions capture, centralize and surface processed information so you can make better-informed decisions.",
+    es: "PMCustom es una empresa de tecnología especializada en el diseño y desarrollo de sistemas innovadores.",
+    en: "PMCustom is a technology company specializing in the design and development of innovative systems.",
   },
   heroCta: { es: "Cuéntanos tu proyecto", en: "Tell us your project" },
 
