@@ -26,32 +26,59 @@ function Proposal2() {
   const [tab, setTab] = useState<"iot" | "id" | "dash">("iot");
   const [openService, setOpenService] = useState<number | null>(null);
 
+  // Productos destacados (contenido oficial PMCustom)
   const servicesData: Service[] = [
     {
-      t: t("otherA"),
-      d: "Diseño de hardware electrónico industrial certificado.",
-      long: "Diseñamos y fabricamos hardware electrónico a medida para entornos industriales exigentes: PCBs multicapa, integración de microcontroladores, sensores y actuadores, con cumplimiento de normativas y certificación CE/FCC cuando corresponde.",
-      bullets: ["Diseño de PCB y firmware embebido", "Prototipado rápido y validación en planta", "Carcasas IP65/IP67 para terreno", "Documentación técnica y certificación"],
+      t: "Tablero Control de Riego PMCustom",
+      d: "Control inteligente de irrigación y fertilización con monitoreo de presión y flujo.",
+      long: "Dispositivo que controla el centro de irrigación, activando bombas de riego y fertilización, y monitorea presión y flujo de agua para asegurar el correcto funcionamiento del sistema de riego. Programable vía web y con comunicación celular hacia la nube.",
+      bullets: [
+        "Programación web y comunicación celular a la nube",
+        "4 entradas para control de caudalímetro",
+        "4 relés para encendido de generador y bombas",
+        "4 salidas latch para válvulas",
+        "4 entradas analógicas para sensores de presión",
+        "LEDs de estado de entradas/salidas en placa",
+        "Entradas SDI-12 para lectura de CE",
+      ],
     },
     {
-      t: t("otherB"),
-      d: "Interfaces web y aplicaciones de control en tiempo real.",
-      long: "Desarrollamos interfaces web y aplicaciones de control que permiten operar, monitorear y configurar tu planta desde cualquier dispositivo, con latencias mínimas y experiencia diseñada para operadores industriales.",
-      bullets: ["SCADA web responsivo", "Control remoto seguro", "Roles y permisos por planta", "Histórico, reportes y exportación"],
+      t: "Nodo PMCustom",
+      d: "Control de válvulas de riego con LoRa y alimentación solar para distribución por sectores.",
+      long: "Sistema que controla hasta dos válvulas de riego, permitiendo distribuir el flujo de agua y fertilizantes por sectores. Comunicación local mediante LoRa con el tablero de control y alimentación 100% solar para despliegue en terreno.",
+      bullets: [
+        "Alimentación solar",
+        "Red local con tecnología LoRa",
+        "Entrada para sensor de presión",
+        "2 salidas Latch para válvulas",
+      ],
     },
     {
-      t: t("otherC"),
-      d: "Conexión con ERPs, APIs y plataformas existentes.",
-      long: "Conectamos tu operación con los sistemas que ya usas: ERPs (SAP, Odoo, Defontana), CRMs, APIs internas y servicios de terceros. Sincronización bidireccional, colas de eventos y mapeo de datos a medida.",
-      bullets: ["Integración con SAP/Odoo/Defontana", "Webhooks y APIs REST/GraphQL", "Colas y procesamiento asíncrono", "Mapeo y normalización de datos"],
+      t: "Data Logger DSL1 PMCustom",
+      d: "Recopilación multi-sensor y visualización en dashboard con conexión celular a la nube.",
+      long: "Sistema que permite recopilar información de hasta 3 periféricos personalizables y visualizarla en una plataforma o dashboard. Integra sensores que miden temperatura, presión, longitud, fuerza, humedad, velocidad, nivel, posición, color, sonido y muchas otras variables según los requerimientos del usuario.",
+      bullets: [
+        "2 entradas digitales",
+        "Entrada para sensores con interfaz SDI-12",
+        "Alimentación solar",
+        "Comunicación celular para conexión con la nube",
+        "Envío de datos con frecuencia configurable",
+        "Hasta 3 periféricos personalizables",
+      ],
     },
     {
-      t: t("otherD"),
-      d: "Infraestructura cloud y on-premise gestionada.",
-      long: "Operamos tu infraestructura en la nube o en tus servidores locales con SLA definido: monitoreo 24/7, backups, alta disponibilidad y respuesta ante incidentes por nuestro equipo de operaciones.",
-      bullets: ["AWS, GCP, Azure y on-premise", "Monitoreo y alertas 24/7", "Backups y plan de contingencia", "SLA y soporte dedicado"],
+      t: "Desarrollo a medida",
+      d: "Dispositivos tecnológicos personalizados, integraciones web y asesoría CORFO / Ley I+D.",
+      long: "Diseñamos, desarrollamos y desplegamos dispositivos tecnológicos automáticos complementados con interfaces web. Acompañamos cada etapa del ciclo: identificación de requerimientos, diseño de soluciones, evaluación de factibilidad técnica, prototipado y desarrollo del producto. Adicionalmente asesoramos en CORFO, Ley I+D y fondos concursables.",
+      bullets: [
+        "Identificación de requerimientos y factibilidad técnica",
+        "Prototipado y desarrollo del producto",
+        "Interfaces web a medida e integraciones",
+        "Asesoría CORFO, Ley I+D y fondos concursables",
+      ],
     },
   ];
+
 
 
 
@@ -101,8 +128,9 @@ function Proposal2() {
           <div className="flex items-center gap-10">
             <img src={pmcustomLogo.url} alt="PMCustom" className="h-7 w-auto" />
             <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[var(--p2-white)]/85">
-              <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
+              <a href="#pilares" className="hover:text-[var(--p2-green)]">¿Por qué?</a>
               <a href="#soluciones" className="hover:text-[var(--p2-green)]">Soluciones</a>
+              <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
               <a href="#corfo" className="hover:text-[var(--p2-green)]">CORFO</a>
               <a href="#proceso" className="hover:text-[var(--p2-green)]">Proceso</a>
               <a href="#contacto" className="hover:text-[var(--p2-green)]">Contacto</a>
@@ -122,9 +150,9 @@ function Proposal2() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/10" />
           <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 lg:px-10 flex items-center">
             <div className="max-w-2xl">
-              <div className="p2-eyebrow">PMCUSTOM · INDUSTRIAL IoT</div>
+              <div className="p2-eyebrow">PMCUSTOM · SISTEMAS EMBEBIDOS · IoT</div>
               <h1 className="mt-5 p2-display text-4xl md:text-6xl lg:text-7xl text-white">
-                Sistemas embebidos que convierten <span className="text-[var(--p2-green)]">datos en decisiones</span>.
+                Tu partner tecnológico en <span className="text-[var(--p2-green)]">sistemas embebidos e IoT</span>.
               </h1>
               <p className="mt-6 text-base md:text-lg text-white/80 max-w-xl leading-relaxed">
                 {t("heroDesc")}
@@ -179,6 +207,35 @@ function Proposal2() {
         </div>
       </section>
 
+      {/* ============= PILARES — ¿Por qué PMCustom? ============= */}
+      <section id="pilares" className="py-20 md:py-28 bg-[var(--p2-black)]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl">
+            <div className="p2-eyebrow">{t("pillarsKicker")}</div>
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
+              {t("pillarsTitle").split("sustentable")[0]}
+              <span className="text-[var(--p2-green)]">sustentable</span>.
+            </h2>
+            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">{t("pillarsLead")}</p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
+            {[
+              { i: "01", t: t("pillar1T"), d: t("pillar1D") },
+              { i: "02", t: t("pillar2T"), d: t("pillar2D") },
+              { i: "03", t: t("pillar3T"), d: t("pillar3D") },
+            ].map((p) => (
+              <div key={p.i} className="bg-[var(--p2-black)] p-8">
+                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
+                <h3 className="mt-5 p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{p.t}</h3>
+                <p className="mt-4 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* ============= SECTION — Soluciones (tabbed, NVIDIA style) ============= */}
       <section id="soluciones" className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -229,9 +286,9 @@ function Proposal2() {
       {/* ============= PRODUCTOS — grid de cards ============= */}
       <section id="productos" className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="p2-eyebrow">Otros Servicios</div>
+          <div className="p2-eyebrow">{t("productsKicker")}</div>
           <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
-            Un equipo completo, <span className="text-[var(--p2-green)]">bajo un mismo techo</span>.
+            Soluciones para <span className="text-[var(--p2-green)]">IoT agrícola e industrial</span>.
           </h2>
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
