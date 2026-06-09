@@ -286,9 +286,9 @@ function Proposal2() {
       {/* ============= PRODUCTOS — grid de cards ============= */}
       <section id="productos" className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="p2-eyebrow">Otros Servicios</div>
+          <div className="p2-eyebrow">{t("productsKicker")}</div>
           <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
-            Un equipo completo, <span className="text-[var(--p2-green)]">bajo un mismo techo</span>.
+            Soluciones para <span className="text-[var(--p2-green)]">IoT agrícola e industrial</span>.
           </h2>
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
