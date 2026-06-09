@@ -207,6 +207,35 @@ function Proposal2() {
         </div>
       </section>
 
+      {/* ============= PILARES — ¿Por qué PMCustom? ============= */}
+      <section id="pilares" className="py-20 md:py-28 bg-[var(--p2-black)]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl">
+            <div className="p2-eyebrow">{t("pillarsKicker")}</div>
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
+              {t("pillarsTitle").split("sustentable")[0]}
+              <span className="text-[var(--p2-green)]">sustentable</span>.
+            </h2>
+            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">{t("pillarsLead")}</p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
+            {[
+              { i: "01", t: t("pillar1T"), d: t("pillar1D") },
+              { i: "02", t: t("pillar2T"), d: t("pillar2D") },
+              { i: "03", t: t("pillar3T"), d: t("pillar3D") },
+            ].map((p) => (
+              <div key={p.i} className="bg-[var(--p2-black)] p-8">
+                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
+                <h3 className="mt-5 p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{p.t}</h3>
+                <p className="mt-4 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* ============= SECTION — Soluciones (tabbed, NVIDIA style) ============= */}
       <section id="soluciones" className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
