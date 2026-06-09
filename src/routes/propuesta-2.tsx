@@ -128,8 +128,9 @@ function Proposal2() {
           <div className="flex items-center gap-10">
             <img src={pmcustomLogo.url} alt="PMCustom" className="h-7 w-auto" />
             <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[var(--p2-white)]/85">
-              <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
+              <a href="#pilares" className="hover:text-[var(--p2-green)]">¿Por qué?</a>
               <a href="#soluciones" className="hover:text-[var(--p2-green)]">Soluciones</a>
+              <a href="#productos" className="hover:text-[var(--p2-green)]">Productos</a>
               <a href="#corfo" className="hover:text-[var(--p2-green)]">CORFO</a>
               <a href="#proceso" className="hover:text-[var(--p2-green)]">Proceso</a>
               <a href="#contacto" className="hover:text-[var(--p2-green)]">Contacto</a>
