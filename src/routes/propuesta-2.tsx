@@ -26,32 +26,59 @@ function Proposal2() {
   const [tab, setTab] = useState<"iot" | "id" | "dash">("iot");
   const [openService, setOpenService] = useState<number | null>(null);
 
+  // Productos destacados (contenido oficial PMCustom)
   const servicesData: Service[] = [
     {
-      t: t("otherA"),
-      d: "Diseño de hardware electrónico industrial certificado.",
-      long: "Diseñamos y fabricamos hardware electrónico a medida para entornos industriales exigentes: PCBs multicapa, integración de microcontroladores, sensores y actuadores, con cumplimiento de normativas y certificación CE/FCC cuando corresponde.",
-      bullets: ["Diseño de PCB y firmware embebido", "Prototipado rápido y validación en planta", "Carcasas IP65/IP67 para terreno", "Documentación técnica y certificación"],
+      t: "Tablero Control de Riego PMCustom",
+      d: "Control inteligente de irrigación y fertilización con monitoreo de presión y flujo.",
+      long: "Dispositivo que controla el centro de irrigación, activando bombas de riego y fertilización, y monitorea presión y flujo de agua para asegurar el correcto funcionamiento del sistema de riego. Programable vía web y con comunicación celular hacia la nube.",
+      bullets: [
+        "Programación web y comunicación celular a la nube",
+        "4 entradas para control de caudalímetro",
+        "4 relés para encendido de generador y bombas",
+        "4 salidas latch para válvulas",
+        "4 entradas analógicas para sensores de presión",
+        "LEDs de estado de entradas/salidas en placa",
+        "Entradas SDI-12 para lectura de CE",
+      ],
     },
     {
-      t: t("otherB"),
-      d: "Interfaces web y aplicaciones de control en tiempo real.",
-      long: "Desarrollamos interfaces web y aplicaciones de control que permiten operar, monitorear y configurar tu planta desde cualquier dispositivo, con latencias mínimas y experiencia diseñada para operadores industriales.",
-      bullets: ["SCADA web responsivo", "Control remoto seguro", "Roles y permisos por planta", "Histórico, reportes y exportación"],
+      t: "Nodo PMCustom",
+      d: "Control de válvulas de riego con LoRa y alimentación solar para distribución por sectores.",
+      long: "Sistema que controla hasta dos válvulas de riego, permitiendo distribuir el flujo de agua y fertilizantes por sectores. Comunicación local mediante LoRa con el tablero de control y alimentación 100% solar para despliegue en terreno.",
+      bullets: [
+        "Alimentación solar",
+        "Red local con tecnología LoRa",
+        "Entrada para sensor de presión",
+        "2 salidas Latch para válvulas",
+      ],
     },
     {
-      t: t("otherC"),
-      d: "Conexión con ERPs, APIs y plataformas existentes.",
-      long: "Conectamos tu operación con los sistemas que ya usas: ERPs (SAP, Odoo, Defontana), CRMs, APIs internas y servicios de terceros. Sincronización bidireccional, colas de eventos y mapeo de datos a medida.",
-      bullets: ["Integración con SAP/Odoo/Defontana", "Webhooks y APIs REST/GraphQL", "Colas y procesamiento asíncrono", "Mapeo y normalización de datos"],
+      t: "Data Logger DSL1 PMCustom",
+      d: "Recopilación multi-sensor y visualización en dashboard con conexión celular a la nube.",
+      long: "Sistema que permite recopilar información de hasta 3 periféricos personalizables y visualizarla en una plataforma o dashboard. Integra sensores que miden temperatura, presión, longitud, fuerza, humedad, velocidad, nivel, posición, color, sonido y muchas otras variables según los requerimientos del usuario.",
+      bullets: [
+        "2 entradas digitales",
+        "Entrada para sensores con interfaz SDI-12",
+        "Alimentación solar",
+        "Comunicación celular para conexión con la nube",
+        "Envío de datos con frecuencia configurable",
+        "Hasta 3 periféricos personalizables",
+      ],
     },
     {
-      t: t("otherD"),
-      d: "Infraestructura cloud y on-premise gestionada.",
-      long: "Operamos tu infraestructura en la nube o en tus servidores locales con SLA definido: monitoreo 24/7, backups, alta disponibilidad y respuesta ante incidentes por nuestro equipo de operaciones.",
-      bullets: ["AWS, GCP, Azure y on-premise", "Monitoreo y alertas 24/7", "Backups y plan de contingencia", "SLA y soporte dedicado"],
+      t: "Desarrollo a medida",
+      d: "Dispositivos tecnológicos personalizados, integraciones web y asesoría CORFO / Ley I+D.",
+      long: "Diseñamos, desarrollamos y desplegamos dispositivos tecnológicos automáticos complementados con interfaces web. Acompañamos cada etapa del ciclo: identificación de requerimientos, diseño de soluciones, evaluación de factibilidad técnica, prototipado y desarrollo del producto. Adicionalmente asesoramos en CORFO, Ley I+D y fondos concursables.",
+      bullets: [
+        "Identificación de requerimientos y factibilidad técnica",
+        "Prototipado y desarrollo del producto",
+        "Interfaces web a medida e integraciones",
+        "Asesoría CORFO, Ley I+D y fondos concursables",
+      ],
     },
   ];
+
 
 
 
