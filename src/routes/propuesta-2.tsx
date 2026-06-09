@@ -150,9 +150,9 @@ function Proposal2() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/10" />
           <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 lg:px-10 flex items-center">
             <div className="max-w-2xl">
-              <div className="p2-eyebrow">PMCUSTOM · INDUSTRIAL IoT</div>
+              <div className="p2-eyebrow">PMCUSTOM · SISTEMAS EMBEBIDOS · IoT</div>
               <h1 className="mt-5 p2-display text-4xl md:text-6xl lg:text-7xl text-white">
-                Sistemas embebidos que convierten <span className="text-[var(--p2-green)]">datos en decisiones</span>.
+                Tu partner tecnológico en <span className="text-[var(--p2-green)]">sistemas embebidos e IoT</span>.
               </h1>
               <p className="mt-6 text-base md:text-lg text-white/80 max-w-xl leading-relaxed">
                 {t("heroDesc")}
