@@ -411,8 +411,12 @@ function Proposal2() {
         </div>
       </section>
 
+      {/* ============= CARRUSEL — Nuestro trabajo ============= */}
+      <WorkCarousel />
+
       {/* ============= CONTACTO ============= */}
       <section id="contacto" className="py-20 md:py-28 bg-[var(--p2-surface)] border-t border-[var(--p2-line)]">
+
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20">
           <div>
             <div className="p2-eyebrow">{t("contactKicker")}</div>
