@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
@@ -8,6 +8,14 @@ import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
 import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
+import pillarServices from "@/assets/pillar-services.jpg";
+import pillarProducts from "@/assets/pillar-products.jpg";
+import pillarCorfo from "@/assets/pillar-corfo.jpg";
+import work1 from "@/assets/work-1.jpg";
+import work2 from "@/assets/work-2.jpg";
+import work3 from "@/assets/work-3.jpg";
+import work4 from "@/assets/work-4.jpg";
+import work5 from "@/assets/work-5.jpg";
 
 export const Route = createFileRoute("/propuesta-2")({
   head: () => ({
