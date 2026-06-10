@@ -215,29 +215,59 @@ function Proposal2() {
         </div>
       </section>
 
-      {/* ============= PILARES — ¿Por qué PMCustom? ============= */}
+      {/* ============= PILARES — 3 pilares comunicacionales ============= */}
       <section id="pilares" className="py-20 md:py-28 bg-[var(--p2-black)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <div className="p2-eyebrow">{t("pillarsKicker")}</div>
+            <div className="p2-eyebrow">Nuestros pilares</div>
             <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
-              {t("pillarsTitle").split("sustentable")[0]}
-              <span className="text-[var(--p2-green)]">sustentable</span>.
+              Tres formas de <span className="text-[var(--p2-green)]">transformar tu operación</span>.
             </h2>
-            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">{t("pillarsLead")}</p>
+            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">
+              Combinamos desarrollo a medida, productos probados en terreno y asesoría en financiamiento para llevar tu proyecto desde la idea hasta su despliegue productivo.
+            </p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
             {[
-              { i: "01", t: t("pillar1T"), d: t("pillar1D") },
-              { i: "02", t: t("pillar2T"), d: t("pillar2D") },
-              { i: "03", t: t("pillar3T"), d: t("pillar3D") },
+              {
+                i: "01",
+                t: "Servicios de desarrollo",
+                d: "Diseñamos y desarrollamos soluciones tecnológicas a medida: hardware embebido, firmware, dashboards e integraciones para resolver problemas reales de tu operación.",
+                img: pillarServices,
+                href: "#soluciones",
+              },
+              {
+                i: "02",
+                t: "Productos desplegados en campo",
+                d: "Más de 3.000 dispositivos PMCustom operando en agroindustria: tableros de riego, nodos LoRa y data loggers solares listos para escalar.",
+                img: pillarProducts,
+                href: "#productos",
+              },
+              {
+                i: "03",
+                t: "Financiamiento y CORFO",
+                d: "Te acompañamos en la postulación a fondos CORFO y Ley I+D para que el desarrollo tecnológico sea más accesible y rentable para tu empresa.",
+                img: pillarCorfo,
+                href: "#corfo",
+              },
             ].map((p) => (
-              <div key={p.i} className="bg-[var(--p2-black)] p-8">
-                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
-                <h3 className="mt-5 p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{p.t}</h3>
-                <p className="mt-4 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.d}</p>
-              </div>
+              <a key={p.i} href={p.href} className="group p2-card overflow-hidden flex flex-col hover:border-[var(--p2-green)] transition-colors">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.t}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-7 flex-1 flex flex-col">
+                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
+                  <h3 className="mt-4 p2-display text-2xl text-[var(--p2-white)]">{p.t}</h3>
+                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed flex-1">{p.d}</p>
+                  <div className="mt-6 text-xs font-semibold text-[var(--p2-green)]">Ver más →</div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
