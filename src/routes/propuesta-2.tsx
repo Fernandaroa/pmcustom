@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
@@ -8,6 +8,14 @@ import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
 import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
+import pillarServices from "@/assets/pillar-services.jpg";
+import pillarProducts from "@/assets/pillar-products.jpg";
+import pillarCorfo from "@/assets/pillar-corfo.jpg";
+import work1 from "@/assets/work-1.jpg";
+import work2 from "@/assets/work-2.jpg";
+import work3 from "@/assets/work-3.jpg";
+import work4 from "@/assets/work-4.jpg";
+import work5 from "@/assets/work-5.jpg";
 
 export const Route = createFileRoute("/propuesta-2")({
   head: () => ({
@@ -207,29 +215,59 @@ function Proposal2() {
         </div>
       </section>
 
-      {/* ============= PILARES — ¿Por qué PMCustom? ============= */}
+      {/* ============= PILARES — 3 pilares comunicacionales ============= */}
       <section id="pilares" className="py-20 md:py-28 bg-[var(--p2-black)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <div className="p2-eyebrow">{t("pillarsKicker")}</div>
+            <div className="p2-eyebrow">Nuestros pilares</div>
             <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
-              {t("pillarsTitle").split("sustentable")[0]}
-              <span className="text-[var(--p2-green)]">sustentable</span>.
+              Tres formas de <span className="text-[var(--p2-green)]">transformar tu operación</span>.
             </h2>
-            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">{t("pillarsLead")}</p>
+            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">
+              Combinamos desarrollo a medida, productos probados en terreno y asesoría en financiamiento para llevar tu proyecto desde la idea hasta su despliegue productivo.
+            </p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
             {[
-              { i: "01", t: t("pillar1T"), d: t("pillar1D") },
-              { i: "02", t: t("pillar2T"), d: t("pillar2D") },
-              { i: "03", t: t("pillar3T"), d: t("pillar3D") },
+              {
+                i: "01",
+                t: "Servicios de desarrollo",
+                d: "Diseñamos y desarrollamos soluciones tecnológicas a medida: hardware embebido, firmware, dashboards e integraciones para resolver problemas reales de tu operación.",
+                img: pillarServices,
+                href: "#soluciones",
+              },
+              {
+                i: "02",
+                t: "Productos desplegados en campo",
+                d: "Más de 3.000 dispositivos PMCustom operando en agroindustria: tableros de riego, nodos LoRa y data loggers solares listos para escalar.",
+                img: pillarProducts,
+                href: "#productos",
+              },
+              {
+                i: "03",
+                t: "Financiamiento y CORFO",
+                d: "Te acompañamos en la postulación a fondos CORFO y Ley I+D para que el desarrollo tecnológico sea más accesible y rentable para tu empresa.",
+                img: pillarCorfo,
+                href: "#corfo",
+              },
             ].map((p) => (
-              <div key={p.i} className="bg-[var(--p2-black)] p-8">
-                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
-                <h3 className="mt-5 p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{p.t}</h3>
-                <p className="mt-4 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.d}</p>
-              </div>
+              <a key={p.i} href={p.href} className="group p2-card overflow-hidden flex flex-col hover:border-[var(--p2-green)] transition-colors">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.t}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-7 flex-1 flex flex-col">
+                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">{p.i}</div>
+                  <h3 className="mt-4 p2-display text-2xl text-[var(--p2-white)]">{p.t}</h3>
+                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed flex-1">{p.d}</p>
+                  <div className="mt-6 text-xs font-semibold text-[var(--p2-green)]">Ver más →</div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
@@ -373,8 +411,12 @@ function Proposal2() {
         </div>
       </section>
 
+      {/* ============= CARRUSEL — Nuestro trabajo ============= */}
+      <WorkCarousel />
+
       {/* ============= CONTACTO ============= */}
       <section id="contacto" className="py-20 md:py-28 bg-[var(--p2-surface)] border-t border-[var(--p2-line)]">
+
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20">
           <div>
             <div className="p2-eyebrow">{t("contactKicker")}</div>
@@ -441,6 +483,80 @@ function ServiceModal({ open, onClose, service }: { open: boolean; onClose: () =
         </div>
       </div>
     </div>
+  );
+}
+
+function WorkCarousel() {
+  const slides = [
+    { img: work1, t: "Hardware embebido", d: "Diseño y fabricación de PCBs y dispositivos a medida." },
+    { img: work2, t: "Instalación en terreno", d: "Despliegue de tableros de control en sistemas de riego." },
+    { img: work3, t: "IoT agrícola", d: "Nodos solares LoRa monitoreando viñedos y cultivos." },
+    { img: work4, t: "Dashboards en tiempo real", d: "Visualización y alertas 24/7 para tu operación." },
+    { img: work5, t: "Equipo PMCustom", d: "I+D, prototipado y desarrollo colaborativo con el cliente." },
+  ];
+  const [i, setI] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % slides.length), 4000);
+    return () => clearInterval(id);
+  }, [slides.length]);
+
+  return (
+    <section className="py-20 md:py-28 bg-[var(--p2-black)] border-t border-[var(--p2-line)]">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+          <div>
+            <div className="p2-eyebrow">Nuestro trabajo</div>
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
+              Tecnología PMCustom <span className="text-[var(--p2-green)]">en acción</span>.
+            </h2>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setI((v) => (v - 1 + slides.length) % slides.length)}
+              className="p2-btn-ghost !py-2 !px-4"
+              aria-label="Anterior"
+            >
+              ←
+            </button>
+            <button
+              onClick={() => setI((v) => (v + 1) % slides.length)}
+              className="p2-btn-ghost !py-2 !px-4"
+              aria-label="Siguiente"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden border border-[var(--p2-line)] bg-[var(--p2-surface)]">
+          {slides.map((s, idx) => (
+            <div
+              key={idx}
+              className={`absolute inset-0 transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            >
+              <img src={s.img} alt={s.t} loading="lazy" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 max-w-2xl">
+                <h3 className="p2-display text-2xl md:text-4xl text-white">{s.t}</h3>
+                <p className="mt-3 text-sm md:text-base text-white/80">{s.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 flex justify-center gap-2">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setI(idx)}
+              className={`h-1.5 transition-all ${idx === i ? "w-10 bg-[var(--p2-green)]" : "w-6 bg-[var(--p2-line)]"}`}
+              aria-label={`Ir a slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
