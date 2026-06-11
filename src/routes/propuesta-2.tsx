@@ -197,22 +197,6 @@ function Proposal2() {
         </div>
 
 
-        {/* Featured strip — NVIDIA-style cards under hero */}
-        <div className="bg-[var(--p2-black)] border-t border-[var(--p2-line)]">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-6 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--p2-line)] border border-[var(--p2-line)]">
-            {[
-              { tag: "IoT", title: "Sensores industriales en terreno" },
-              { tag: "R+D", title: "Investigación aplicada con Ley I+D" },
-              { tag: "Cloud", title: "Dashboards en tiempo real 24/7" },
-              { tag: "CORFO", title: "Asesoría y postulación a fondos" },
-            ].map((f) => (
-              <a key={f.title} href="#soluciones" className="bg-[var(--p2-black)] p-5 hover:bg-[var(--p2-surface)] transition-colors group">
-                <div className="text-[10px] tracking-[0.22em] uppercase text-[var(--p2-green)] font-bold">{f.tag}</div>
-                <div className="mt-2 text-sm font-semibold text-[var(--p2-white)] group-hover:text-[var(--p2-green)] leading-snug">{f.title} →</div>
-              </a>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* ============= PILARES — 3 pilares comunicacionales ============= */}
