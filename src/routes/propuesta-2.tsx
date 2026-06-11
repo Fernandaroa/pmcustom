@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch } from "@/components/shared-nav";
 import { ContactForm } from "@/components/contact-form";
-import heroIndustrial from "@/assets/hero-industrial.jpg";
+import heroIot from "@/assets/hero-iot.jpg";
 import industryAerial from "@/assets/industry-aerial.jpg";
 import dashboardRoom from "@/assets/dashboard-room.jpg";
 import circuitMacro from "@/assets/circuit-macro.jpg";
