@@ -154,7 +154,7 @@ function Proposal2() {
       {/* ============= HERO ============= */}
       <section className="relative">
         <div className="relative h-[78vh] min-h-[560px] w-full overflow-hidden">
-          <img src={heroIndustrial} alt="Industria monitoreada por PMCustom" className="absolute inset-0 w-full h-full object-cover" />
+          <img src={heroIot} alt="Dispositivo IoT PMCustom instalado en campo" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/10" />
           <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 lg:px-10 flex items-center">
             <div className="max-w-2xl">
