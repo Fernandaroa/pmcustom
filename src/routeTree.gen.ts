@@ -9,53 +9,243 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as Propuesta2RouteImport } from './routes/propuesta-2'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SistemasEmbebidosRouteImport } from './routes/sistemas-embebidos'
+import { Route as IotRouteImport } from './routes/iot'
+import { Route as InvestigacionDesarrolloRouteImport } from './routes/investigacion-desarrollo'
+import { Route as IndustriasRouteImport } from './routes/industrias'
+import { Route as DesarrolloProductosRouteImport } from './routes/desarrollo-productos'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CasosExitoRouteImport } from './routes/casos-exito'
+import { Route as AutomatizacionIndustrialRouteImport } from './routes/automatizacion-industrial'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasosExitoIndexRouteImport } from './routes/casos-exito.index'
+import { Route as CasosExitoSlugRouteImport } from './routes/casos-exito.$slug'
 
-const Propuesta2Route = Propuesta2RouteImport.update({
-  id: '/propuesta-2',
-  path: '/propuesta-2',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SistemasEmbebidosRoute = SistemasEmbebidosRouteImport.update({
+  id: '/sistemas-embebidos',
+  path: '/sistemas-embebidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IotRoute = IotRouteImport.update({
+  id: '/iot',
+  path: '/iot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestigacionDesarrolloRoute = InvestigacionDesarrolloRouteImport.update({
+  id: '/investigacion-desarrollo',
+  path: '/investigacion-desarrollo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriasRoute = IndustriasRouteImport.update({
+  id: '/industrias',
+  path: '/industrias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesarrolloProductosRoute = DesarrolloProductosRouteImport.update({
+  id: '/desarrollo-productos',
+  path: '/desarrollo-productos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosExitoRoute = CasosExitoRouteImport.update({
+  id: '/casos-exito',
+  path: '/casos-exito',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutomatizacionIndustrialRoute =
+  AutomatizacionIndustrialRouteImport.update({
+    id: '/automatizacion-industrial',
+    path: '/automatizacion-industrial',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasosExitoIndexRoute = CasosExitoIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CasosExitoRoute,
+} as any)
+const CasosExitoSlugRoute = CasosExitoSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CasosExitoRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/propuesta-2': typeof Propuesta2Route
+  '/automatizacion-industrial': typeof AutomatizacionIndustrialRoute
+  '/casos-exito': typeof CasosExitoRouteWithChildren
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-productos': typeof DesarrolloProductosRoute
+  '/industrias': typeof IndustriasRoute
+  '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
+  '/iot': typeof IotRoute
+  '/sistemas-embebidos': typeof SistemasEmbebidosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/casos-exito/$slug': typeof CasosExitoSlugRoute
+  '/casos-exito/': typeof CasosExitoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/propuesta-2': typeof Propuesta2Route
+  '/automatizacion-industrial': typeof AutomatizacionIndustrialRoute
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-productos': typeof DesarrolloProductosRoute
+  '/industrias': typeof IndustriasRoute
+  '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
+  '/iot': typeof IotRoute
+  '/sistemas-embebidos': typeof SistemasEmbebidosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/casos-exito/$slug': typeof CasosExitoSlugRoute
+  '/casos-exito': typeof CasosExitoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/propuesta-2': typeof Propuesta2Route
+  '/automatizacion-industrial': typeof AutomatizacionIndustrialRoute
+  '/casos-exito': typeof CasosExitoRouteWithChildren
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-productos': typeof DesarrolloProductosRoute
+  '/industrias': typeof IndustriasRoute
+  '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
+  '/iot': typeof IotRoute
+  '/sistemas-embebidos': typeof SistemasEmbebidosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/casos-exito/$slug': typeof CasosExitoSlugRoute
+  '/casos-exito/': typeof CasosExitoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/propuesta-2'
+  fullPaths:
+    | '/'
+    | '/automatizacion-industrial'
+    | '/casos-exito'
+    | '/contacto'
+    | '/desarrollo-productos'
+    | '/industrias'
+    | '/investigacion-desarrollo'
+    | '/iot'
+    | '/sistemas-embebidos'
+    | '/sitemap.xml'
+    | '/casos-exito/$slug'
+    | '/casos-exito/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/propuesta-2'
-  id: '__root__' | '/' | '/propuesta-2'
+  to:
+    | '/'
+    | '/automatizacion-industrial'
+    | '/contacto'
+    | '/desarrollo-productos'
+    | '/industrias'
+    | '/investigacion-desarrollo'
+    | '/iot'
+    | '/sistemas-embebidos'
+    | '/sitemap.xml'
+    | '/casos-exito/$slug'
+    | '/casos-exito'
+  id:
+    | '__root__'
+    | '/'
+    | '/automatizacion-industrial'
+    | '/casos-exito'
+    | '/contacto'
+    | '/desarrollo-productos'
+    | '/industrias'
+    | '/investigacion-desarrollo'
+    | '/iot'
+    | '/sistemas-embebidos'
+    | '/sitemap.xml'
+    | '/casos-exito/$slug'
+    | '/casos-exito/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  Propuesta2Route: typeof Propuesta2Route
+  AutomatizacionIndustrialRoute: typeof AutomatizacionIndustrialRoute
+  CasosExitoRoute: typeof CasosExitoRouteWithChildren
+  ContactoRoute: typeof ContactoRoute
+  DesarrolloProductosRoute: typeof DesarrolloProductosRoute
+  IndustriasRoute: typeof IndustriasRoute
+  InvestigacionDesarrolloRoute: typeof InvestigacionDesarrolloRoute
+  IotRoute: typeof IotRoute
+  SistemasEmbebidosRoute: typeof SistemasEmbebidosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/propuesta-2': {
-      id: '/propuesta-2'
-      path: '/propuesta-2'
-      fullPath: '/propuesta-2'
-      preLoaderRoute: typeof Propuesta2RouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistemas-embebidos': {
+      id: '/sistemas-embebidos'
+      path: '/sistemas-embebidos'
+      fullPath: '/sistemas-embebidos'
+      preLoaderRoute: typeof SistemasEmbebidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iot': {
+      id: '/iot'
+      path: '/iot'
+      fullPath: '/iot'
+      preLoaderRoute: typeof IotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investigacion-desarrollo': {
+      id: '/investigacion-desarrollo'
+      path: '/investigacion-desarrollo'
+      fullPath: '/investigacion-desarrollo'
+      preLoaderRoute: typeof InvestigacionDesarrolloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industrias': {
+      id: '/industrias'
+      path: '/industrias'
+      fullPath: '/industrias'
+      preLoaderRoute: typeof IndustriasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desarrollo-productos': {
+      id: '/desarrollo-productos'
+      path: '/desarrollo-productos'
+      fullPath: '/desarrollo-productos'
+      preLoaderRoute: typeof DesarrolloProductosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos-exito': {
+      id: '/casos-exito'
+      path: '/casos-exito'
+      fullPath: '/casos-exito'
+      preLoaderRoute: typeof CasosExitoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automatizacion-industrial': {
+      id: '/automatizacion-industrial'
+      path: '/automatizacion-industrial'
+      fullPath: '/automatizacion-industrial'
+      preLoaderRoute: typeof AutomatizacionIndustrialRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -65,12 +255,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/casos-exito/': {
+      id: '/casos-exito/'
+      path: '/'
+      fullPath: '/casos-exito/'
+      preLoaderRoute: typeof CasosExitoIndexRouteImport
+      parentRoute: typeof CasosExitoRoute
+    }
+    '/casos-exito/$slug': {
+      id: '/casos-exito/$slug'
+      path: '/$slug'
+      fullPath: '/casos-exito/$slug'
+      preLoaderRoute: typeof CasosExitoSlugRouteImport
+      parentRoute: typeof CasosExitoRoute
+    }
   }
 }
 
+interface CasosExitoRouteChildren {
+  CasosExitoSlugRoute: typeof CasosExitoSlugRoute
+  CasosExitoIndexRoute: typeof CasosExitoIndexRoute
+}
+
+const CasosExitoRouteChildren: CasosExitoRouteChildren = {
+  CasosExitoSlugRoute: CasosExitoSlugRoute,
+  CasosExitoIndexRoute: CasosExitoIndexRoute,
+}
+
+const CasosExitoRouteWithChildren = CasosExitoRoute._addFileChildren(
+  CasosExitoRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  Propuesta2Route: Propuesta2Route,
+  AutomatizacionIndustrialRoute: AutomatizacionIndustrialRoute,
+  CasosExitoRoute: CasosExitoRouteWithChildren,
+  ContactoRoute: ContactoRoute,
+  DesarrolloProductosRoute: DesarrolloProductosRoute,
+  IndustriasRoute: IndustriasRoute,
+  InvestigacionDesarrolloRoute: InvestigacionDesarrolloRoute,
+  IotRoute: IotRoute,
+  SistemasEmbebidosRoute: SistemasEmbebidosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
