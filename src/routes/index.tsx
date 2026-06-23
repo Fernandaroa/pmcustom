@@ -124,19 +124,21 @@ function HomePage() {
             </p>
           </div>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s, i) => (
-              <Link
-                key={s.slug}
-                to="/$slug" as any
-                {...({ to: `/${s.slug}` } as any)}
-                className="p2-card p-7 hover:border-[var(--p2-green)] transition-colors group"
-              >
-                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
-                <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
-                <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
-              </Link>
-            ))}
+            {services.map((s, i) => {
+              const to = `/${s.slug}` as "/sistemas-embebidos";
+              return (
+                <Link
+                  key={s.slug}
+                  to={to}
+                  className="p2-card p-7 hover:border-[var(--p2-green)] transition-colors group"
+                >
+                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                  <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
+                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
+                  <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
