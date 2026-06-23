@@ -62,7 +62,7 @@ function CaseDetail() {
             Resultados <span className="text-[var(--p2-green)]">concretos</span> en terreno.
           </h2>
           <ul className="mt-10 grid sm:grid-cols-2 gap-4">
-            {c.benefits.map((b) => (
+            {c.benefits.map((b: string) => (
               <li key={b} className="p2-card p-5 flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-[var(--p2-green)] shrink-0 mt-0.5" />
                 <span className="text-sm text-[var(--p2-white)] leading-relaxed">{b}</span>
