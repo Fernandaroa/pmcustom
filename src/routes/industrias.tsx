@@ -45,14 +45,19 @@ function IndustriasPage() {
       </section>
 
       <section className="py-20 md:py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {industries.map((ind, i) => (
-            <div key={ind.name} className="p2-card p-7">
-              <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-              <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{ind.name}</h3>
-              <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{ind.description}</p>
-            </div>
-          ))}
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <h2 className="p2-display text-2xl md:text-3xl text-[var(--p2-white)] mb-10">
+            Industrias que atendemos
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {industries.map((ind, i) => (
+              <div key={ind.name} className="p2-card p-7">
+                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{ind.name}</h3>
+                <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{ind.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </SiteLayout>

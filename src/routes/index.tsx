@@ -7,17 +7,11 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sistemas Embebidos e IoT para Empresas | PM CUSTOM Chile" },
-      {
-        name: "description",
-        content:
-          "Desarrollamos soluciones tecnológicas a medida basadas en sistemas embebidos, IoT, sensores y automatización industrial. Optimiza procesos y captura datos en tiempo real con PM CUSTOM.",
-      },
       { property: "og:title", content: "Sistemas Embebidos e IoT para Empresas | PM CUSTOM Chile" },
       {
         property: "og:description",
         content:
-          "Diseñamos sistemas embebidos, soluciones IoT y plataformas de monitoreo para empresas que buscan optimizar procesos y tomar mejores decisiones.",
+          "Diseñamos sistemas embebidos, soluciones IoT y plataformas de monitoreo para empresas que buscan optimizar procesos y decidir con datos.",
       },
       { property: "og:url", content: "/" },
       { property: "og:image", content: heroIot },
