@@ -13,3 +13,7 @@
 - [Industrias](/industrias): Sectores atendidos: agricultura, minería, industria, manufactura, energía, logística.
 - [Casos de éxito](/casos-exito): Proyectos implementados con resultados operacionales.
 - [Contacto](/contacto): Solicita una evaluación técnica.
+
+## Guías
+
+- [Aplicaciones de IoT Industrial en Chile](/blog/aplicaciones-iot-industrial): Casos reales de IIoT en minería, agricultura y manufactura.
