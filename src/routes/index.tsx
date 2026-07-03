@@ -46,7 +46,7 @@ function HomePage() {
                 Diseñamos y desarrollamos sistemas embebidos, soluciones IoT, sensores inteligentes y plataformas de monitoreo en tiempo real para empresas que buscan optimizar procesos, automatizar operaciones y tomar mejores decisiones basadas en datos.
               </p>
               <p className="mt-4 text-sm md:text-base text-white/65 max-w-2xl leading-relaxed">
-                Desde la idea inicial hasta la implementación, acompañamos a nuestros clientes en el desarrollo de tecnología personalizada que genera eficiencia, control y crecimiento sostenible.
+                {"\n"}
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link to="/contacto" className="p2-btn">Solicita una evaluación →</Link>
