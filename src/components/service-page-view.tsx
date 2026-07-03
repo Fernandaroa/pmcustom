@@ -1,7 +1,7 @@
 import type React from "react";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
-import { CheckCircle2 } from "lucide-react";
+
 import type { ServicePage as ServiceData } from "@/lib/content";
 
 export function ServicePageView({ service, extra }: { service: ServiceData; extra?: React.ReactNode }) {
