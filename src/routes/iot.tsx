@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServicePageView } from "@/components/service-page-view";
+import { IotPlatformVideo } from "@/components/iot-platform-video";
 import { services } from "@/lib/content";
 
 const service = services.find((s) => s.slug === "iot")!;
@@ -16,5 +17,5 @@ export const Route = createFileRoute("/iot")({
     ],
     links: [{ rel: "canonical", href: "/iot" }],
   }),
-  component: () => <ServicePageView service={service} />,
+  component: () => <ServicePageView service={service} extra={<IotPlatformVideo />} />,
 });

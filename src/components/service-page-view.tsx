@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { CheckCircle2 } from "lucide-react";
 import type { ServicePage as ServiceData } from "@/lib/content";
 
-export function ServicePageView({ service }: { service: ServiceData }) {
+export function ServicePageView({ service, extra }: { service: ServiceData; extra?: React.ReactNode }) {
   return (
     <SiteLayout>
       <section className="relative border-b border-[var(--p2-line)]">
