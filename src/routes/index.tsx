@@ -222,12 +222,9 @@ function HomePage() {
           <h2 className="mt-4 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
             ¿Tienes un desafío tecnológico que <span className="text-[var(--p2-green)]">aún no encuentra solución</span>?
           </h2>
-          <p className="mt-6 text-base md:text-lg text-[var(--p2-white)]/75 max-w-2xl mx-auto">
-            En PM CUSTOM diseñamos tecnología adaptada a la realidad de tu empresa. Desde sensores inteligentes y plataformas IoT hasta productos tecnológicos completamente personalizados.
-          </p>
           <div className="mt-9 flex flex-wrap gap-3 justify-center">
-            <Link to="/contacto" className="p2-btn">Agenda una reunión con nuestros especialistas →</Link>
-            <Link to="/contacto" className="p2-btn-ghost">Evalúa tu proyecto hoy</Link>
+            <Link to="/contacto" className="p2-btn">Agenda una reunión →</Link>
+            <Link to="/contacto" className="p2-btn-ghost">Evalúa tu proyecto</Link>
           </div>
         </div>
       </section>
