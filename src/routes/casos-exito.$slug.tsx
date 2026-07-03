@@ -22,6 +22,22 @@ export const Route = createFileRoute("/casos-exito/$slug")({
         { property: "og:image", content: loaderData.image },
       ],
       links: [{ rel: "canonical", href: `/casos-exito/${params.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: loaderData.title,
+            description: loaderData.short,
+            image: loaderData.image,
+            articleBody: loaderData.description,
+            author: { "@type": "Organization", name: "PM CUSTOM" },
+            publisher: { "@type": "Organization", name: "PM CUSTOM" },
+            mainEntityOfPage: `/casos-exito/${params.slug}`,
+          }),
+        },
+      ],
     };
   },
   component: CaseDetail,
