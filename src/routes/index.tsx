@@ -65,10 +65,7 @@ function HomePage() {
               Más que tecnología. Desarrollamos <span className="text-[var(--p2-green)]">soluciones que generan resultados</span>.
             </h2>
             <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">
-              Muchas empresas enfrentan desafíos operacionales que las soluciones tradicionales no logran resolver. En PM CUSTOM desarrollamos tecnología a medida para capturar información crítica, automatizar procesos y transformar datos en decisiones estratégicas.
-            </p>
-            <p className="mt-4 text-base text-[var(--p2-white)]/75 leading-relaxed">
-              Trabajamos junto a empresas de agricultura, minería, manufactura, logística e industria para diseñar soluciones tecnológicas que aumentan la productividad y mejoran el control operacional.
+              Desarrollamos tecnología a medida para capturar información crítica, automatizar procesos y convertir datos en decisiones. Trabajamos con agricultura, minería, manufactura, logística e industria.
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-3 self-center">
