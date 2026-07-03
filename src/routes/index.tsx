@@ -43,10 +43,7 @@ function HomePage() {
                 <span className="text-[var(--p2-green)]">soluciones tecnológicas inteligentes</span> para tu empresa.
               </h1>
               <p className="mt-7 text-base md:text-lg text-white/85 max-w-2xl leading-relaxed">
-                Diseñamos y desarrollamos sistemas embebidos, soluciones IoT, sensores inteligentes y plataformas de monitoreo en tiempo real para empresas que buscan optimizar procesos, automatizar operaciones y tomar mejores decisiones basadas en datos.
-              </p>
-              <p className="mt-4 text-sm md:text-base text-white/65 max-w-2xl leading-relaxed">
-                {"\n"}
+                Sistemas embebidos, IoT y automatización a medida para empresas que necesitan datos en tiempo real y control operacional.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link to="/contacto" className="p2-btn">Solicita una evaluación →</Link>
@@ -68,10 +65,7 @@ function HomePage() {
               Más que tecnología. Desarrollamos <span className="text-[var(--p2-green)]">soluciones que generan resultados</span>.
             </h2>
             <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">
-              Muchas empresas enfrentan desafíos operacionales que las soluciones tradicionales no logran resolver. En PM CUSTOM desarrollamos tecnología a medida para capturar información crítica, automatizar procesos y transformar datos en decisiones estratégicas.
-            </p>
-            <p className="mt-4 text-base text-[var(--p2-white)]/75 leading-relaxed">
-              Trabajamos junto a empresas de agricultura, minería, manufactura, logística e industria para diseñar soluciones tecnológicas que aumentan la productividad y mejoran el control operacional.
+              Desarrollamos tecnología a medida para capturar información crítica, automatizar procesos y convertir datos en decisiones. Trabajamos con agricultura, minería, manufactura, logística e industria.
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-3 self-center">
@@ -119,9 +113,6 @@ function HomePage() {
             <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
               Desarrollamos tecnología personalizada para <span className="text-[var(--p2-green)]">resolver problemas reales</span>.
             </h2>
-            <p className="mt-6 text-base text-[var(--p2-white)]/75">
-              No vendemos productos genéricos. Diseñamos soluciones tecnológicas específicas para las necesidades de cada empresa.
-            </p>
           </div>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s, i) => {
@@ -231,12 +222,9 @@ function HomePage() {
           <h2 className="mt-4 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
             ¿Tienes un desafío tecnológico que <span className="text-[var(--p2-green)]">aún no encuentra solución</span>?
           </h2>
-          <p className="mt-6 text-base md:text-lg text-[var(--p2-white)]/75 max-w-2xl mx-auto">
-            En PM CUSTOM diseñamos tecnología adaptada a la realidad de tu empresa. Desde sensores inteligentes y plataformas IoT hasta productos tecnológicos completamente personalizados.
-          </p>
           <div className="mt-9 flex flex-wrap gap-3 justify-center">
-            <Link to="/contacto" className="p2-btn">Agenda una reunión con nuestros especialistas →</Link>
-            <Link to="/contacto" className="p2-btn-ghost">Evalúa tu proyecto hoy</Link>
+            <Link to="/contacto" className="p2-btn">Agenda una reunión →</Link>
+            <Link to="/contacto" className="p2-btn-ghost">Evalúa tu proyecto</Link>
           </div>
         </div>
       </section>
