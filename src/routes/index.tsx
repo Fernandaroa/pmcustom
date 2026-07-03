@@ -43,10 +43,7 @@ function HomePage() {
                 <span className="text-[var(--p2-green)]">soluciones tecnológicas inteligentes</span> para tu empresa.
               </h1>
               <p className="mt-7 text-base md:text-lg text-white/85 max-w-2xl leading-relaxed">
-                Diseñamos y desarrollamos sistemas embebidos, soluciones IoT, sensores inteligentes y plataformas de monitoreo en tiempo real para empresas que buscan optimizar procesos, automatizar operaciones y tomar mejores decisiones basadas en datos.
-              </p>
-              <p className="mt-4 text-sm md:text-base text-white/65 max-w-2xl leading-relaxed">
-                {"\n"}
+                Sistemas embebidos, IoT y automatización a medida para empresas que necesitan datos en tiempo real y control operacional.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link to="/contacto" className="p2-btn">Solicita una evaluación →</Link>
