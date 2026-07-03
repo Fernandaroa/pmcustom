@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "pm-custom-mcp",
+      "version": "0.1.0",
+      "title": "PM CUSTOM MCP"
+    },
+    "tools": [
+      {
+        "name": "list_services",
+        "title": "Listar servicios",
+        "description": "Lista los servicios ofrecidos por PM CUSTOM (sistemas embebidos, IoT, automatización industrial, desarrollo de productos, I+D).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_case_studies",
+        "title": "Listar casos de éxito",
+        "description": "Lista los casos de éxito de PM CUSTOM con su resumen y beneficios.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_industries",
+        "title": "Listar industrias",
+        "description": "Lista las industrias atendidas por PM CUSTOM.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_contact",
+        "title": "Enviar formulario de contacto",
+        "description": "Envía una solicitud de contacto a PM CUSTOM. Usar cuando el usuario quiera pedir una evaluación o cotización.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Nombre completo del contacto."
+            },
+            "company": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Empresa u organización."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Email de contacto."
+            },
+            "phone": {
+              "description": "Teléfono (opcional).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "company",
+            "email"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
