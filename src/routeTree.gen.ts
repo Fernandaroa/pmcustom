@@ -22,6 +22,7 @@ import { Route as AutomatizacionIndustrialRouteImport } from './routes/automatiz
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CasosExitoIndexRouteImport } from './routes/casos-exito.index'
 import { Route as CasosExitoSlugRouteImport } from './routes/casos-exito.$slug'
+import { Route as BlogAplicacionesIotIndustrialRouteImport } from './routes/blog.aplicaciones-iot-industrial'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -92,6 +93,12 @@ const CasosExitoSlugRoute = CasosExitoSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => CasosExitoRoute,
 } as any)
+const BlogAplicacionesIotIndustrialRoute =
+  BlogAplicacionesIotIndustrialRouteImport.update({
+    id: '/blog/aplicaciones-iot-industrial',
+    path: '/blog/aplicaciones-iot-industrial',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const Char91DotwellKnownChar93OauthProtectedResourceRoute =
   Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
     id: '/.well-known/oauth-protected-resource',
@@ -125,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/aplicaciones-iot-industrial': typeof BlogAplicacionesIotIndustrialRoute
   '/casos-exito/$slug': typeof CasosExitoSlugRoute
   '/casos-exito/': typeof CasosExitoIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -142,6 +150,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/aplicaciones-iot-industrial': typeof BlogAplicacionesIotIndustrialRoute
   '/casos-exito/$slug': typeof CasosExitoSlugRoute
   '/casos-exito': typeof CasosExitoIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -161,6 +170,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/aplicaciones-iot-industrial': typeof BlogAplicacionesIotIndustrialRoute
   '/casos-exito/$slug': typeof CasosExitoSlugRoute
   '/casos-exito/': typeof CasosExitoIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -181,6 +191,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/aplicaciones-iot-industrial'
     | '/casos-exito/$slug'
     | '/casos-exito/'
     | '/.mcp/invoke-tool/$tool'
@@ -198,6 +209,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/aplicaciones-iot-industrial'
     | '/casos-exito/$slug'
     | '/casos-exito'
     | '/.mcp/invoke-tool/$tool'
@@ -216,6 +228,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/aplicaciones-iot-industrial'
     | '/casos-exito/$slug'
     | '/casos-exito/'
     | '/.mcp/invoke-tool/$tool'
@@ -235,6 +248,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  BlogAplicacionesIotIndustrialRoute: typeof BlogAplicacionesIotIndustrialRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
@@ -331,6 +345,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CasosExitoSlugRouteImport
       parentRoute: typeof CasosExitoRoute
     }
+    '/blog/aplicaciones-iot-industrial': {
+      id: '/blog/aplicaciones-iot-industrial'
+      path: '/blog/aplicaciones-iot-industrial'
+      fullPath: '/blog/aplicaciones-iot-industrial'
+      preLoaderRoute: typeof BlogAplicacionesIotIndustrialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/.well-known/oauth-protected-resource': {
       id: '/.well-known/oauth-protected-resource'
       path: '/.well-known/oauth-protected-resource'
@@ -384,6 +405,7 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  BlogAplicacionesIotIndustrialRoute: BlogAplicacionesIotIndustrialRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
