@@ -113,9 +113,6 @@ function HomePage() {
             <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
               Desarrollamos tecnología personalizada para <span className="text-[var(--p2-green)]">resolver problemas reales</span>.
             </h2>
-            <p className="mt-6 text-base text-[var(--p2-white)]/75">
-              No vendemos productos genéricos. Diseñamos soluciones tecnológicas específicas para las necesidades de cada empresa.
-            </p>
           </div>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s, i) => {
