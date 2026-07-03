@@ -1,9 +1,10 @@
+import type React from "react";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { CheckCircle2 } from "lucide-react";
 import type { ServicePage as ServiceData } from "@/lib/content";
 
-export function ServicePageView({ service }: { service: ServiceData }) {
+export function ServicePageView({ service, extra }: { service: ServiceData; extra?: React.ReactNode }) {
   return (
     <SiteLayout>
       <section className="relative border-b border-[var(--p2-line)]">
@@ -43,7 +44,10 @@ export function ServicePageView({ service }: { service: ServiceData }) {
         </div>
       </section>
 
+      {extra}
+
       <section className="py-20 md:py-24">
+
         <div className="max-w-[900px] mx-auto px-6 lg:px-10 text-center">
           <h2 className="p2-display text-3xl md:text-4xl text-[var(--p2-white)]">
             ¿Listo para conversar tu <span className="text-[var(--p2-green)]">proyecto</span>?
