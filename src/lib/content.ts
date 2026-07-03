@@ -79,7 +79,7 @@ export const services: ServicePage[] = [
     title: "Sistemas Embebidos",
     metaTitle: "Sistemas Embebidos a Medida | PM CUSTOM",
     metaDescription:
-      "Desarrollo de sistemas embebidos personalizados: hardware, firmware y dispositivos electrónicos inteligentes para controlar, monitorear y automatizar procesos críticos.",
+      "Desarrollo de sistemas embebidos a medida: hardware, firmware y dispositivos electrónicos para automatizar y monitorear procesos críticos.",
     lead: "Dispositivos electrónicos inteligentes diseñados para tu operación.",
     body: "Desarrollamos dispositivos electrónicos inteligentes capaces de controlar, monitorear y automatizar procesos críticos. Acompañamos cada etapa: diseño de hardware, firmware embebido, validación y despliegue en terreno.",
     benefits: [
