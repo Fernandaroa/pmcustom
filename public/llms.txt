@@ -1,0 +1,15 @@
+# PM CUSTOM
+
+> PM CUSTOM es una empresa chilena de tecnología a medida: sistemas embebidos, soluciones IoT, automatización industrial y desarrollo de productos tecnológicos para agricultura, minería, manufactura, energía, industria y logística.
+
+## Pages
+
+- [Inicio](/): Panorama de servicios, industrias y casos de éxito.
+- [Sistemas Embebidos](/sistemas-embebidos): Hardware, firmware y dispositivos electrónicos a medida.
+- [Soluciones IoT](/iot): Sensores, dispositivos y plataformas con datos en tiempo real.
+- [Automatización Industrial](/automatizacion-industrial): Controladores, integraciones y supervisión remota.
+- [Desarrollo de Productos](/desarrollo-productos): Del prototipo a la manufactura piloto.
+- [Investigación y Desarrollo](/investigacion-desarrollo): I+D, Ley I+D y postulación a CORFO.
+- [Industrias](/industrias): Sectores atendidos: agricultura, minería, industria, manufactura, energía, logística.
+- [Casos de éxito](/casos-exito): Proyectos implementados con resultados operacionales.
+- [Contacto](/contacto): Solicita una evaluación técnica.
