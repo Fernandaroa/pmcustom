@@ -70,7 +70,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Desarrollamos soluciones tecnológicas a medida basadas en sistemas embebidos, IoT, sensores y automatización industrial. Optimiza procesos y captura datos en tiempo real con PM CUSTOM.",
+          "Sistemas embebidos, IoT y automatización industrial a medida. Datos en tiempo real y control operacional para empresas en Chile.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "PM CUSTOM" },
@@ -82,6 +82,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "PM CUSTOM",
+              url: "/",
+              description:
+                "Empresa chilena de desarrollo de sistemas embebidos, soluciones IoT y automatización industrial a medida.",
+              areaServed: "CL",
+            },
+            {
+              "@type": "WebSite",
+              name: "PM CUSTOM",
+              url: "/",
+            },
+          ],
+        }),
       },
     ],
   }),
