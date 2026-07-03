@@ -27,22 +27,6 @@ export function ServicePageView({ service, extra }: { service: ServiceData; extr
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-[var(--p2-surface)]">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="p2-eyebrow">Beneficios</div>
-          <h2 className="mt-3 p2-display text-3xl md:text-4xl text-[var(--p2-white)] max-w-3xl">
-            Lo que obtienes al trabajar con <span className="text-[var(--p2-green)]">PM CUSTOM</span>.
-          </h2>
-          <ul className="mt-10 grid sm:grid-cols-2 gap-4">
-            {service.benefits.map((b) => (
-              <li key={b} className="p2-card p-5 flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-[var(--p2-green)] shrink-0 mt-0.5" />
-                <span className="text-sm text-[var(--p2-white)] leading-relaxed">{b}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
 
       {extra}
 
