@@ -47,6 +47,7 @@ export function ContactForm({ variant: _variant }: Props) {
         <input
           className="p2-input"
           placeholder="Nombre *"
+          aria-label="Nombre"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           maxLength={100}
@@ -55,6 +56,7 @@ export function ContactForm({ variant: _variant }: Props) {
         <input
           className="p2-input"
           placeholder="Empresa *"
+          aria-label="Empresa"
           value={form.company}
           onChange={(e) => setForm({ ...form, company: e.target.value })}
           maxLength={120}
@@ -65,6 +67,7 @@ export function ContactForm({ variant: _variant }: Props) {
         type="email"
         className="p2-input"
         placeholder="Email *"
+        aria-label="Email"
         value={form.email}
         onChange={(e) => setForm({ ...form, email: e.target.value })}
         maxLength={150}
@@ -74,6 +77,7 @@ export function ContactForm({ variant: _variant }: Props) {
         type="tel"
         className="p2-input"
         placeholder="Teléfono (opcional)"
+        aria-label="Teléfono"
         value={form.phone}
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         maxLength={30}
