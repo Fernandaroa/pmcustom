@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SistemasEmbebidosRouteImport } from './routes/sistemas-embebidos'
+import { Route as SistemaPredictorRiegoNdviRouteImport } from './routes/sistema-predictor-riego-ndvi'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as IotRouteImport } from './routes/iot'
 import { Route as InvestigacionDesarrolloRouteImport } from './routes/investigacion-desarrollo'
@@ -37,6 +38,12 @@ const SistemasEmbebidosRoute = SistemasEmbebidosRouteImport.update({
   path: '/sistemas-embebidos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SistemaPredictorRiegoNdviRoute =
+  SistemaPredictorRiegoNdviRouteImport.update({
+    id: '/sistema-predictor-riego-ndvi',
+    path: '/sistema-predictor-riego-ndvi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
@@ -128,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
   '/iot': typeof IotRoute
   '/mcp': typeof McpRoute
+  '/sistema-predictor-riego-ndvi': typeof SistemaPredictorRiegoNdviRoute
   '/sistemas-embebidos': typeof SistemasEmbebidosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -146,6 +154,7 @@ export interface FileRoutesByTo {
   '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
   '/iot': typeof IotRoute
   '/mcp': typeof McpRoute
+  '/sistema-predictor-riego-ndvi': typeof SistemaPredictorRiegoNdviRoute
   '/sistemas-embebidos': typeof SistemasEmbebidosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -166,6 +175,7 @@ export interface FileRoutesById {
   '/investigacion-desarrollo': typeof InvestigacionDesarrolloRoute
   '/iot': typeof IotRoute
   '/mcp': typeof McpRoute
+  '/sistema-predictor-riego-ndvi': typeof SistemaPredictorRiegoNdviRoute
   '/sistemas-embebidos': typeof SistemasEmbebidosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/investigacion-desarrollo'
     | '/iot'
     | '/mcp'
+    | '/sistema-predictor-riego-ndvi'
     | '/sistemas-embebidos'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/investigacion-desarrollo'
     | '/iot'
     | '/mcp'
+    | '/sistema-predictor-riego-ndvi'
     | '/sistemas-embebidos'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
@@ -224,6 +236,7 @@ export interface FileRouteTypes {
     | '/investigacion-desarrollo'
     | '/iot'
     | '/mcp'
+    | '/sistema-predictor-riego-ndvi'
     | '/sistemas-embebidos'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
@@ -244,6 +257,7 @@ export interface RootRouteChildren {
   InvestigacionDesarrolloRoute: typeof InvestigacionDesarrolloRoute
   IotRoute: typeof IotRoute
   McpRoute: typeof McpRoute
+  SistemaPredictorRiegoNdviRoute: typeof SistemaPredictorRiegoNdviRoute
   SistemasEmbebidosRoute: typeof SistemasEmbebidosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
@@ -266,6 +280,13 @@ declare module '@tanstack/react-router' {
       path: '/sistemas-embebidos'
       fullPath: '/sistemas-embebidos'
       preLoaderRoute: typeof SistemasEmbebidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistema-predictor-riego-ndvi': {
+      id: '/sistema-predictor-riego-ndvi'
+      path: '/sistema-predictor-riego-ndvi'
+      fullPath: '/sistema-predictor-riego-ndvi'
+      preLoaderRoute: typeof SistemaPredictorRiegoNdviRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -400,6 +421,7 @@ const rootRouteChildren: RootRouteChildren = {
   InvestigacionDesarrolloRoute: InvestigacionDesarrolloRoute,
   IotRoute: IotRoute,
   McpRoute: McpRoute,
+  SistemaPredictorRiegoNdviRoute: SistemaPredictorRiegoNdviRoute,
   SistemasEmbebidosRoute: SistemasEmbebidosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
