@@ -1,39 +1,95 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
-const navLinks = [
-  { to: "/", label: "Inicio" },
-  { to: "/sistemas-embebidos", label: "Sistemas Embebidos" },
-  { to: "/iot", label: "IoT" },
-  { to: "/automatizacion-industrial", label: "Automatización" },
-  { to: "/investigacion-desarrollo", label: "I+D · CORFO" },
-  { to: "/casos-exito", label: "Casos" },
+const navGroups = [
+  {
+    label: "Productos",
+    items: [
+      { to: "/casos-exito/nodo-riego-controlador", label: "Sistema de riego automatizado IoT" },
+      { to: "/casos-exito/data-logger", label: "Data Logger Inteligente" },
+      { to: "/sistema-predictor-riego-ndvi", label: "Índice NDVI" },
+    ],
+  },
+  {
+    label: "Servicios",
+    items: [
+      { to: "/sistemas-embebidos", label: "Sistemas Embebidos" },
+      { to: "/iot", label: "Soluciones IoT" },
+      { to: "/automatizacion-industrial", label: "Automatización Industrial" },
+      { to: "/desarrollo-productos", label: "Desarrollo de Productos" },
+      { to: "/investigacion-desarrollo", label: "I+D · CORFO" },
+    ],
+  },
+] as const;
+
+const topLinks = [
+  { to: "/casos-exito", label: "Casos de éxito" },
   { to: "/industrias", label: "Industrias" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 
+function isActive(pathname: string, to: string) {
+  if (to === "/") return pathname === "/";
+  return pathname.startsWith(to);
+}
+
 function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
+
+  const toggle = (key: string) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
+
   return (
     <header className="sticky top-0 z-40 bg-[var(--p2-black)]/90 backdrop-blur border-b border-[var(--p2-line)]">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-7 w-auto" />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:flex lg:items-center lg:justify-between">
+        <Link to="/" className="flex items-center gap-3 min-w-0">
+          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-7 w-auto shrink-0" />
         </Link>
+
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-[var(--p2-white)]/85">
-          {navLinks.slice(1).map((l) => (
+          {navGroups.map((g) => (
+            <div key={g.label} className="relative group">
+              <button className="flex items-center gap-1 py-2 hover:text-[var(--p2-green)] transition-colors">
+                {g.label}
+                <ChevronDown size={14} className="shrink-0 transition-transform group-hover:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-[var(--p2-surface)] border border-[var(--p2-line)] rounded-xl shadow-xl p-3 min-w-[260px]">
+                  {g.items.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
+                        isActive(pathname, item.to)
+                          ? "text-[var(--p2-green)] bg-[var(--p2-green)]/10"
+                          : "text-[var(--p2-white)]/80 hover:text-[var(--p2-green)] hover:bg-[var(--p2-green)]/10"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {topLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              activeProps={{ className: "text-[var(--p2-green)]" }}
-              className="hover:text-[var(--p2-green)] transition-colors"
+              className={`py-2 transition-colors ${
+                isActive(pathname, l.to) ? "text-[var(--p2-green)]" : "hover:text-[var(--p2-green)]"
+              }`}
             >
               {l.label}
             </Link>
           ))}
         </nav>
+
         <div className="flex items-center gap-3">
           <Link to="/contacto" className="hidden md:inline-flex p2-btn !py-2 !px-4 !text-xs">
             Evaluar proyecto
@@ -47,16 +103,49 @@ function SiteHeader() {
           </button>
         </div>
       </div>
+
       {open && (
         <div className="lg:hidden border-t border-[var(--p2-line)] bg-[var(--p2-black)]">
-          <nav className="px-6 py-4 flex flex-col gap-3 text-sm">
-            {navLinks.map((l) => (
+          <nav className="px-6 py-4 flex flex-col gap-1 text-sm">
+            {navGroups.map((g) => (
+              <div key={g.label} className="border-b border-[var(--p2-line)]/50 last:border-b-0">
+                <button
+                  onClick={() => toggle(g.label)}
+                  className="w-full flex items-center justify-between py-3 text-[var(--p2-white)]/90 font-medium"
+                >
+                  {g.label}
+                  <ChevronDown
+                    size={16}
+                    className={`shrink-0 transition-transform ${expanded[g.label] ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {expanded[g.label] && (
+                  <div className="pb-3 pl-2 flex flex-col gap-1">
+                    {g.items.map((item) => (
+                      <Link
+                        key={item.to}
+                        to={item.to}
+                        onClick={() => setOpen(false)}
+                        className={`py-2 text-sm ${
+                          isActive(pathname, item.to) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/70 hover:text-[var(--p2-green)]"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {topLinks.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="py-1 text-[var(--p2-white)]/85 hover:text-[var(--p2-green)]"
-                activeProps={{ className: "text-[var(--p2-green)]" }}
+                className={`py-3 border-b border-[var(--p2-line)]/50 last:border-b-0 font-medium ${
+                  isActive(pathname, l.to) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/90 hover:text-[var(--p2-green)]"
+                }`}
               >
                 {l.label}
               </Link>
@@ -79,12 +168,19 @@ function SiteFooter() {
           </p>
         </div>
         <div>
+          <div className="p2-eyebrow mb-4">Productos</div>
+          <ul className="space-y-2">
+            <li><Link to="/casos-exito/nodo-riego-controlador" className="hover:text-[var(--p2-green)]">Sistema de riego automatizado IoT</Link></li>
+            <li><Link to="/casos-exito/data-logger" className="hover:text-[var(--p2-green)]">Data Logger Inteligente</Link></li>
+            <li><Link to="/sistema-predictor-riego-ndvi" className="hover:text-[var(--p2-green)]">Predictor de Riego NDVI</Link></li>
+          </ul>
+        </div>
+        <div>
           <div className="p2-eyebrow mb-4">Servicios</div>
           <ul className="space-y-2">
             <li><Link to="/sistemas-embebidos" className="hover:text-[var(--p2-green)]">Sistemas Embebidos</Link></li>
             <li><Link to="/iot" className="hover:text-[var(--p2-green)]">Soluciones IoT</Link></li>
             <li><Link to="/automatizacion-industrial" className="hover:text-[var(--p2-green)]">Automatización Industrial</Link></li>
-            <li><Link to="/sistema-predictor-riego-ndvi" className="hover:text-[var(--p2-green)]">Predictor de Riego NDVI</Link></li>
             <li><Link to="/desarrollo-productos" className="hover:text-[var(--p2-green)]">Desarrollo de Productos</Link></li>
             <li><Link to="/investigacion-desarrollo" className="hover:text-[var(--p2-green)]">I+D · CORFO</Link></li>
           </ul>
@@ -96,11 +192,6 @@ function SiteFooter() {
             <li><Link to="/industrias" className="hover:text-[var(--p2-green)]">Industrias</Link></li>
             <li><Link to="/contacto" className="hover:text-[var(--p2-green)]">Contacto</Link></li>
           </ul>
-        </div>
-        <div>
-          <div className="p2-eyebrow mb-4">Contacto</div>
-          <p className="text-[var(--p2-muted)]">¿Tienes un desafío tecnológico?<br />Te respondemos en menos de 24 hrs hábiles.</p>
-          <Link to="/contacto" className="mt-4 inline-flex p2-btn !py-2 !px-4 !text-xs">Agendar reunión</Link>
         </div>
       </div>
       <div className="border-t border-[var(--p2-line)] py-5 text-center text-xs text-[var(--p2-muted)]">
