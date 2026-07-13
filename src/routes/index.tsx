@@ -250,8 +250,7 @@ function HomePage() {
             ¿Tienes un desafío tecnológico que <span className="text-[var(--p2-green)]">aún no encuentra solución</span>?
           </h2>
           <div className="mt-9 flex flex-wrap gap-3 justify-center">
-            <Link to="/contacto" className="p2-btn">Agenda una reunión →</Link>
-            <Link to="/contacto" className="p2-btn-ghost">Evalúa tu proyecto</Link>
+            <Link to="/contacto" className="p2-btn">Evalúa tu proyecto →</Link>
           </div>
         </div>
       </section>
