@@ -120,12 +120,17 @@ function HomePage() {
                 <Reveal key={s.slug} delay={i * 90}>
                   <Link
                     to={to}
-                    className="p2-card p-7 h-full block hover:border-[var(--p2-green)] transition-colors group"
+                    className="p2-card p-7 h-full block hover:border-[var(--p2-green)] transition-colors group relative overflow-hidden"
                   >
-                    <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                    <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
-                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
-                    <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
+                    <div className="absolute -top-3 -right-2 text-[clamp(5rem,10vw,7rem)] font-bold leading-none text-[var(--p2-green)]/10 select-none pointer-events-none transition-opacity group-hover:opacity-20">
+                      0{i + 1}
+                    </div>
+                    <div className="relative">
+                      <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                      <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
+                      <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
+                      <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
+                    </div>
                   </Link>
                 </Reveal>
               );
