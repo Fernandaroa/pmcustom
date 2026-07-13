@@ -52,11 +52,13 @@ function IndustriasPage() {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {industries.map((ind, i) => (
-              <div key={ind.name} className="p2-card p-7">
-                <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{ind.name}</h3>
-                <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{ind.description}</p>
-              </div>
+              <Reveal key={ind.name} delay={i * 80}>
+                <div className="p2-card p-7 h-full">
+                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                  <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{ind.name}</h3>
+                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{ind.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
