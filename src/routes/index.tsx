@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
-import { cases, services, industries, pillars, benefitsList, process } from "@/lib/content";
+import { products, services, industries, pillars, benefitsList, process } from "@/lib/content";
 import heroIot from "@/assets/hero-iot.jpg";
 import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
