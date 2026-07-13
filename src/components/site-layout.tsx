@@ -27,7 +27,6 @@ const navGroups = [
 const topLinks = [
   { to: "/casos-exito", label: "Casos de éxito" },
   { to: "/industrias", label: "Industrias" },
-  { to: "/contacto", label: "Contacto" },
 ] as const;
 
 function isActive(pathname: string, to: string) {
