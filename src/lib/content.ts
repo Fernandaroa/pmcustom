@@ -7,6 +7,7 @@ import pillarCorfo from "@/assets/pillar-corfo.jpg";
 import serviceEmbedded from "@/assets/service-embedded.jpg";
 import serviceAutomation from "@/assets/service-automation.jpg";
 import serviceRd from "@/assets/service-rd.jpg";
+import serviceNdvi from "@/assets/service-ndvi.jpg";
 
 export type CaseStudy = {
   slug: string;
