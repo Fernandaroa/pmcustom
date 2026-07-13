@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
-import { cases, services, industries, pillars, benefitsList, process } from "@/lib/content";
+import { products, services, industries, pillars, benefitsList, process } from "@/lib/content";
 import heroIot from "@/assets/hero-iot.jpg";
 import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
@@ -165,38 +165,51 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CASOS DE ÉXITO */}
+      {/* PRODUCTOS */}
       <section className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
-            <div>
-              <div className="p2-eyebrow">Casos de éxito</div>
-              <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
-                Tecnología aplicada que ya está <span className="text-[var(--p2-green)]">generando resultados</span>.
-              </h2>
-            </div>
-            <Link to="/casos-exito" className="text-sm font-semibold text-[var(--p2-green)] hover:underline">
-              Ver todos →
-            </Link>
+          <div className="max-w-3xl mb-12">
+            <div className="p2-eyebrow">Productos</div>
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
+              Tecnología aplicada que ya está <span className="text-[var(--p2-green)]">generando resultados</span>.
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {cases.map((c) => (
-              <Link
-                key={c.slug}
-                to="/casos-exito/$slug"
-                params={{ slug: c.slug }}
-                className="p2-card group overflow-hidden flex flex-col"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={c.image} alt={c.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-bold text-[var(--p2-white)]">{c.title}</h3>
-                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 flex-1">{c.short}</p>
-                  <div className="mt-5 text-xs font-semibold text-[var(--p2-green)]">Ver caso →</div>
-                </div>
-              </Link>
-            ))}
+            {products.map((p) => {
+              const isNdvi = p.slug === "sistema-predictor-riego-ndvi";
+              return isNdvi ? (
+                <Link
+                  key={p.slug}
+                  to="/sistema-predictor-riego-ndvi"
+                  className="p2-card group overflow-hidden flex flex-col"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-[var(--p2-white)]">{p.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 flex-1">{p.short}</p>
+                    <div className="mt-5 text-xs font-semibold text-[var(--p2-green)]">Ver producto →</div>
+                  </div>
+                </Link>
+              ) : (
+                <Link
+                  key={p.slug}
+                  to="/casos-exito/$slug"
+                  params={{ slug: p.slug }}
+                  className="p2-card group overflow-hidden flex flex-col"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-[var(--p2-white)]">{p.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 flex-1">{p.short}</p>
+                    <div className="mt-5 text-xs font-semibold text-[var(--p2-green)]">Ver producto →</div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

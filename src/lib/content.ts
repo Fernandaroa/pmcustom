@@ -49,6 +49,34 @@ export const cases: CaseStudy[] = [
   },
 ];
 
+export type Product = {
+  slug: string;
+  title: string;
+  short: string;
+  image: string;
+};
+
+export const products: Product[] = [
+  {
+    slug: "nodo-riego-controlador",
+    title: "Sistema de riego automatizado IoT",
+    short: "Producto integrado: controlador central en la nube + nodos autónomos LoRa por sectores.",
+    image: work1,
+  },
+  {
+    slug: "data-logger",
+    title: "Data Logger Inteligente",
+    short: "Captura, almacena y visualiza datos multi-sensor en dashboard en tiempo real.",
+    image: work3,
+  },
+  {
+    slug: "sistema-predictor-riego-ndvi",
+    title: "Índice de Vegetación de Diferencia Normalizada",
+    short: "Imágenes satelitales de polígonos con filtros NDVI para estimar el estado vegetativo y optimizar el riego.",
+    image: serviceNdvi,
+  },
+];
+
 export type ServicePage = {
   slug: string;
   title: string;
