@@ -19,32 +19,18 @@ export type CaseStudy = {
 
 export const cases: CaseStudy[] = [
   {
-    slug: "control-riego",
-    title: "Control Inteligente de Riego",
-    short: "Automatización de irrigación y fertilización con monitoreo y control desde la nube.",
+    slug: "nodo-riego-controlador",
+    title: "Nodo de Riego y Controlador",
+    short: "Producto integrado: controlador central en la nube + nodos autónomos LoRa por sectores.",
     description:
-      "Automatización de sistemas de irrigación y fertilización mediante monitoreo de presión, flujo y control remoto desde la nube. Programable vía web y con comunicación celular, optimiza cada ciclo de riego según condiciones reales del cultivo.",
+      "Solución integral de riego inteligente que combina un controlador central para la automatización de irrigación y fertilización —con monitoreo de presión, flujo y operación remota desde la nube vía web y comunicación celular— junto a nodos autónomos alimentados por energía solar que gestionan válvulas y distribuyen el riego por sectores mediante tecnología LoRa. Un solo producto que integra control centralizado y operación en terreno con amplia cobertura y bajo consumo.",
     benefits: [
-      "Mayor eficiencia hídrica",
-      "Menor intervención manual",
-      "Optimización del uso de recursos",
-      "Control centralizado",
+      "Control centralizado desde la nube",
+      "Nodos autónomos solares con LoRa",
+      "Mayor eficiencia hídrica y menor intervención manual",
+      "Escalabilidad y cobertura por sectores",
     ],
     image: work1,
-  },
-  {
-    slug: "nodo-iot-agricultura",
-    title: "Nodo IoT para Agricultura",
-    short: "Nodo autónomo solar con LoRa para distribución de riego por sectores.",
-    description:
-      "Sistema autónomo alimentado por energía solar que controla válvulas de riego y distribuye recursos por sectores utilizando tecnología LoRa. Diseñado para operar en terreno con cobertura amplia y bajo consumo energético.",
-    benefits: [
-      "Operación remota",
-      "Menor consumo energético",
-      "Mayor control territorial",
-      "Escalabilidad por sectores",
-    ],
-    image: work2,
   },
   {
     slug: "data-logger",
