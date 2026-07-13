@@ -84,6 +84,7 @@ function SiteFooter() {
             <li><Link to="/sistemas-embebidos" className="hover:text-[var(--p2-green)]">Sistemas Embebidos</Link></li>
             <li><Link to="/iot" className="hover:text-[var(--p2-green)]">Soluciones IoT</Link></li>
             <li><Link to="/automatizacion-industrial" className="hover:text-[var(--p2-green)]">Automatización Industrial</Link></li>
+            <li><Link to="/sistema-predictor-riego-ndvi" className="hover:text-[var(--p2-green)]">Predictor de Riego NDVI</Link></li>
             <li><Link to="/desarrollo-productos" className="hover:text-[var(--p2-green)]">Desarrollo de Productos</Link></li>
             <li><Link to="/investigacion-desarrollo" className="hover:text-[var(--p2-green)]">I+D · CORFO</Link></li>
           </ul>
