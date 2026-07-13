@@ -139,32 +139,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* PROCESO */}
-      <section className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="p2-eyebrow">Proceso</div>
-          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
-            Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
-          </h2>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {process.map((step, i) => (
-              <Reveal key={step.n} delay={i * 100}>
-                <div className="p2-card p-6 h-full relative overflow-hidden group">
-                  <div className="absolute -top-3 -right-2 text-[clamp(5rem,10vw,7rem)] font-bold leading-none text-[var(--p2-green)]/10 select-none pointer-events-none transition-opacity group-hover:opacity-20">
-                    {step.n}
-                  </div>
-                  <div className="relative">
-                    <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
-                    <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
-                    <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* PRODUCTOS */}
       <section className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -210,6 +184,32 @@ function HomePage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESO */}
+      <section className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="p2-eyebrow">Proceso</div>
+          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
+            Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
+          </h2>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 100}>
+                <div className="p2-card p-6 h-full relative overflow-hidden group">
+                  <div className="absolute -top-3 -right-2 text-[clamp(5rem,10vw,7rem)] font-bold leading-none text-[var(--p2-green)]/10 select-none pointer-events-none transition-opacity group-hover:opacity-20">
+                    {step.n}
+                  </div>
+                  <div className="relative">
+                    <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
+                    <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
+                    <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
