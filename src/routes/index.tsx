@@ -53,43 +53,26 @@ function HomePage() {
 
       {/* AUTORIDAD */}
       <section className="py-20 md:py-28">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <Reveal>
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-14">
+          <div>
             <div className="p2-eyebrow">Autoridad</div>
-            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
               Más que tecnología. Desarrollamos <span className="text-[var(--p2-green)]">soluciones que generan resultados</span>.
             </h2>
-            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed max-w-3xl">
+            <p className="mt-6 text-base text-[var(--p2-white)]/75 leading-relaxed">
               Desarrollamos tecnología a medida para capturar información crítica, automatizar procesos y convertir datos en decisiones. Trabajamos con agricultura, minería, manufactura, logística e industria.
             </p>
-          </Reveal>
-
-          <div className="mt-14 space-y-6 md:space-y-8">
-            {benefitsList.map((b, i) => {
-              const isEven = i % 2 === 0;
-              return (
-                <Reveal key={b} delay={i * 60}>
-                  <article
-                    className={`p2-card p-7 md:p-10 grid md:grid-cols-12 gap-6 md:gap-10 items-center ${
-                      isEven ? "" : "md:[&>*:first-child]:order-2 md:[&>*:last-child]:border-l-0 md:[&>*:last-child]:border-r md:[&>*:last-child]:pl-0 md:[&>*:last-child]:pr-6"
-                    }`}
-                  >
-                    <div className="md:col-span-4 flex items-center gap-4">
-                      <CheckCircle2 size={28} className="text-[var(--p2-green)] shrink-0" />
-                      <span className="p2-eyebrow !text-[var(--p2-green)]">
-                        {String(i + 1).padStart(2, "0")} · Beneficio
-                      </span>
-                    </div>
-                    <div className="md:col-span-8 md:pl-6 md:border-l md:border-[var(--p2-line)]">
-                      <h3 className="p2-display text-xl md:text-2xl text-[var(--p2-white)] leading-tight">
-                        {b}
-                      </h3>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
           </div>
+          <ul className="grid sm:grid-cols-2 gap-3 self-center">
+            {benefitsList.map((b, i) => (
+              <Reveal key={b} delay={i * 80}>
+                <li className="p2-card p-4 flex items-center gap-3 h-full">
+                  <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--p2-white)]">{b}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -104,16 +87,18 @@ function HomePage() {
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-6">
             {pillars.map((p, i) => (
-              <div key={p.title} className="p2-card flex flex-col overflow-hidden group">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Reveal key={p.title} delay={i * 100}>
+                <div className="p2-card flex flex-col overflow-hidden group h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-7 flex-1 flex flex-col">
+                    <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                    <h3 className="mt-3 p2-display text-2xl text-[var(--p2-white)]">{p.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.description}</p>
+                  </div>
                 </div>
-                <div className="p-7 flex-1 flex flex-col">
-                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                  <h3 className="mt-3 p2-display text-2xl text-[var(--p2-white)]">{p.title}</h3>
-                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{p.description}</p>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -122,44 +107,25 @@ function HomePage() {
       {/* QUÉ HACEMOS */}
       <section className="py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <Reveal>
-            <div className="max-w-3xl">
-              <div className="p2-eyebrow">Qué hacemos</div>
-              <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
-                Desarrollamos tecnología personalizada para <span className="text-[var(--p2-green)]">resolver problemas reales</span>.
-              </h2>
-            </div>
-          </Reveal>
-          <div className="mt-14 space-y-6 md:space-y-8">
+          <div className="max-w-3xl">
+            <div className="p2-eyebrow">Qué hacemos</div>
+            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)]">
+              Desarrollamos tecnología personalizada para <span className="text-[var(--p2-green)]">resolver problemas reales</span>.
+            </h2>
+          </div>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s, i) => {
               const to = `/${s.slug}` as "/sistemas-embebidos";
-              const isEven = i % 2 === 0;
               return (
-                <Reveal key={s.slug} delay={i * 60}>
+                <Reveal key={s.slug} delay={i * 90}>
                   <Link
                     to={to}
-                    className={`p2-card p-8 md:p-10 grid md:grid-cols-12 gap-8 md:gap-10 items-center group hover:border-[var(--p2-green)] transition-colors ${
-                      isEven ? "" : "md:[&>*:first-child]:order-2"
-                    }`}
+                    className="p2-card p-7 h-full block hover:border-[var(--p2-green)] transition-colors group"
                   >
-                    <div className="md:col-span-4 flex flex-col items-start">
-                      <span className="p2-eyebrow !text-[var(--p2-green)]">
-                        {String(i + 1).padStart(2, "0")} · Servicio
-                      </span>
-                      <div
-                        className="mt-4 p2-display text-[var(--p2-green)] leading-none tracking-tight"
-                        style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
-                      >
-                        0{i + 1}
-                      </div>
-                    </div>
-                    <div className="md:col-span-8 md:pl-6 md:border-l md:border-[var(--p2-line)]">
-                      <h3 className="p2-display text-2xl md:text-3xl text-[var(--p2-white)]">{s.title}</h3>
-                      <p className="mt-4 text-base text-[var(--p2-white)]/75 leading-relaxed">{s.lead}</p>
-                      <div className="mt-5 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">
-                        Ver más →
-                      </div>
-                    </div>
+                    <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                    <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
+                    <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
                   </Link>
                 </Reveal>
               );
@@ -171,39 +137,20 @@ function HomePage() {
       {/* PROCESO */}
       <section className="py-20 md:py-28 bg-[var(--p2-surface)] border-y border-[var(--p2-line)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <Reveal>
-            <div className="p2-eyebrow">Proceso</div>
-            <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
-              Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
-            </h2>
-          </Reveal>
-          <div className="mt-14 space-y-6 md:space-y-8">
-            {process.map((step, i) => {
-              const isEven = i % 2 === 0;
-              return (
-                <Reveal key={step.n} delay={i * 60}>
-                  <article
-                    className={`p2-card p-8 md:p-12 grid md:grid-cols-12 gap-8 md:gap-10 items-center ${
-                      isEven ? "" : "md:[&>*:first-child]:order-2"
-                    }`}
-                  >
-                    <div className="md:col-span-4 flex flex-col items-start">
-                      <span className="p2-eyebrow !text-[var(--p2-green)]">Paso {step.n}</span>
-                      <div
-                        className="mt-4 p2-display text-[var(--p2-white)] leading-none tracking-tight"
-                        style={{ fontSize: "clamp(4rem, 10vw, 7rem)" }}
-                      >
-                        {step.n}
-                      </div>
-                    </div>
-                    <div className="md:col-span-8 md:pl-6 md:border-l md:border-[var(--p2-line)]">
-                      <h3 className="p2-display text-2xl md:text-4xl text-[var(--p2-white)]">{step.t}</h3>
-                      <p className="mt-5 text-base md:text-lg text-[var(--p2-white)]/75 leading-relaxed">{step.d}</p>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
+          <div className="p2-eyebrow">Proceso</div>
+          <h2 className="mt-3 p2-display text-3xl md:text-5xl text-[var(--p2-white)] max-w-3xl">
+            Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
+          </h2>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 100}>
+                <div className="p2-card p-6 h-full">
+                  <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
+                  <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
+                  <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -255,11 +202,13 @@ function HomePage() {
             </h2>
           </div>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {industries.map((ind) => (
-              <div key={ind.name} className="p2-card p-6">
-                <h4 className="text-lg font-bold text-[var(--p2-white)]">{ind.name}</h4>
-                <p className="mt-2 text-sm text-[var(--p2-white)]/65">{ind.description}</p>
-              </div>
+            {industries.map((ind, i) => (
+              <Reveal key={ind.name} delay={i * 80}>
+                <div className="p2-card p-6 h-full">
+                  <h4 className="text-lg font-bold text-[var(--p2-white)]">{ind.name}</h4>
+                  <p className="mt-2 text-sm text-[var(--p2-white)]/65">{ind.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-10">
