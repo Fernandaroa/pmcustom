@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import heroIot from "@/assets/hero-iot.jpg";
 import { CheckCircle2 } from "lucide-react";
+import { Reveal } from "@/components/reveal";
 
 const TITLE = "Aplicaciones de IoT Industrial en Chile | PM CUSTOM";
 const DESCRIPTION =
