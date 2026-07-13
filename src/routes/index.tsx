@@ -115,16 +115,17 @@ function HomePage() {
             {services.map((s, i) => {
               const to = `/${s.slug}` as "/sistemas-embebidos";
               return (
-                <Link
-                  key={s.slug}
-                  to={to}
-                  className="p2-card p-7 hover:border-[var(--p2-green)] transition-colors group"
-                >
-                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                  <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
-                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
-                  <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
-                </Link>
+                <Reveal key={s.slug} delay={i * 90}>
+                  <Link
+                    to={to}
+                    className="p2-card p-7 h-full block hover:border-[var(--p2-green)] hover:-translate-y-1 transition-all duration-300 group"
+                  >
+                    <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                    <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
+                    <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
+                  </Link>
+                </Reveal>
               );
             })}
           </div>
