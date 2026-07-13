@@ -64,11 +64,13 @@ function HomePage() {
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-3 self-center">
-            {benefitsList.map((b) => (
-              <li key={b} className="p2-card p-4 flex items-center gap-3">
-                <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0" />
-                <span className="text-sm font-medium text-[var(--p2-white)]">{b}</span>
-              </li>
+            {benefitsList.map((b, i) => (
+              <Reveal key={b} delay={i * 80}>
+                <li className="p2-card p-4 flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--p2-green)]/50">
+                  <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--p2-white)]">{b}</span>
+                </li>
+              </Reveal>
             ))}
           </ul>
         </div>
