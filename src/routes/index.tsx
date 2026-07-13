@@ -149,10 +149,15 @@ function HomePage() {
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {process.map((step, i) => (
               <Reveal key={step.n} delay={i * 100}>
-                <div className="p2-card p-6 h-full">
-                  <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
-                  <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
-                  <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                <div className="p2-card p-6 h-full relative overflow-hidden group">
+                  <div className="absolute -top-3 -right-2 text-[clamp(5rem,10vw,7rem)] font-bold leading-none text-[var(--p2-green)]/10 select-none pointer-events-none transition-opacity group-hover:opacity-20">
+                    {step.n}
+                  </div>
+                  <div className="relative">
+                    <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
+                    <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
+                    <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
