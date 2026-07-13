@@ -127,29 +127,32 @@ function GuidePage() {
           </h2>
 
           <div className="mt-10 space-y-10">
-            {useCases.map((u) => (
-              <section key={u.industry} className="p2-card p-7 md:p-9">
-                <div className="p2-eyebrow">{u.industry}</div>
-                <h3 className="mt-3 text-2xl font-bold text-[var(--p2-white)]">{u.title}</h3>
-                <p className="mt-5 text-sm text-[var(--p2-white)]/70 leading-relaxed">
-                  <strong className="text-[var(--p2-white)]">Problema. </strong>
-                  {u.problem}
-                </p>
-                <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">
-                  <strong className="text-[var(--p2-white)]">Solución IIoT. </strong>
-                  {u.solution}
-                </p>
-                <ul className="mt-5 grid sm:grid-cols-2 gap-3">
-                  {u.outcomes.map((o) => (
-                    <li key={o} className="flex items-start gap-2">
-                      <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0 mt-0.5" />
-                      <span className="text-sm text-[var(--p2-white)]/85 leading-relaxed">{o}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+            {useCases.map((u, i) => (
+              <Reveal key={u.industry} delay={i * 80}>
+                <section className="p2-card p-7 md:p-9">
+                  <div className="p2-eyebrow">{u.industry}</div>
+                  <h3 className="mt-3 text-2xl font-bold text-[var(--p2-white)]">{u.title}</h3>
+                  <p className="mt-5 text-sm text-[var(--p2-white)]/70 leading-relaxed">
+                    <strong className="text-[var(--p2-white)]">Problema. </strong>
+                    {u.problem}
+                  </p>
+                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">
+                    <strong className="text-[var(--p2-white)]">Solución IIoT. </strong>
+                    {u.solution}
+                  </p>
+                  <ul className="mt-5 grid sm:grid-cols-2 gap-3">
+                    {u.outcomes.map((o) => (
+                      <li key={o} className="flex items-start gap-2">
+                        <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0 mt-0.5" />
+                        <span className="text-sm text-[var(--p2-white)]/85 leading-relaxed">{o}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </Reveal>
             ))}
           </div>
+
 
           <h2 className="mt-14 p2-display text-3xl md:text-4xl text-[var(--p2-white)]">
             Cómo evaluar si tu operación está lista para IIoT
