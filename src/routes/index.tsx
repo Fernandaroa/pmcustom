@@ -140,12 +140,17 @@ function HomePage() {
             Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
           </h2>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {process.map((step) => (
-              <div key={step.n} className="p2-card p-6">
-                <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
-                <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
-                <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
-              </div>
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 120}>
+                <div className="p2-card p-6 h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:border-[var(--p2-green)]/60">
+                  <div className="absolute -top-6 -right-4 text-[6rem] font-bold p2-display text-[var(--p2-green)]/5 group-hover:text-[var(--p2-green)]/10 transition-colors leading-none pointer-events-none">
+                    {step.n}
+                  </div>
+                  <div className="relative text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
+                  <h4 className="relative mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
+                  <p className="relative mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
