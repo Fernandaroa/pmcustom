@@ -202,11 +202,13 @@ function HomePage() {
             </h2>
           </div>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {industries.map((ind) => (
-              <div key={ind.name} className="p2-card p-6">
-                <h4 className="text-lg font-bold text-[var(--p2-white)]">{ind.name}</h4>
-                <p className="mt-2 text-sm text-[var(--p2-white)]/65">{ind.description}</p>
-              </div>
+            {industries.map((ind, i) => (
+              <Reveal key={ind.name} delay={i * 80}>
+                <div className="p2-card p-6 h-full">
+                  <h4 className="text-lg font-bold text-[var(--p2-white)]">{ind.name}</h4>
+                  <p className="mt-2 text-sm text-[var(--p2-white)]/65">{ind.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-10">
