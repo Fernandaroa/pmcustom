@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { industries } from "@/lib/content";
 import industriesHero from "@/assets/industries-hero.jpg";
+import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/industrias")({
   head: () => ({
