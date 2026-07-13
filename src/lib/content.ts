@@ -20,7 +20,7 @@ export type CaseStudy = {
 export const cases: CaseStudy[] = [
   {
     slug: "nodo-riego-controlador",
-    title: "Nodo de Riego y Controlador",
+    title: "Sistema de riego automatizado IoT",
     short: "Producto integrado: controlador central en la nube + nodos autónomos LoRa por sectores.",
     description:
       "Solución integral de riego inteligente que combina un controlador central para la automatización de irrigación y fertilización —con monitoreo de presión, flujo y operación remota desde la nube vía web y comunicación celular— junto a nodos autónomos alimentados por energía solar que gestionan válvulas y distribuyen el riego por sectores mediante tecnología LoRa. Un solo producto que integra control centralizado y operación en terreno con amplia cobertura y bajo consumo.",
