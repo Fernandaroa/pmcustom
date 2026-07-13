@@ -141,6 +141,23 @@ export const services: ServicePage[] = [
     ],
     image: serviceRd,
   },
+  {
+    slug: "sistema-predictor-riego-ndvi",
+    title: "Índice de Vegetación de Diferencia Normalizada",
+    metaTitle: "Sistema Predictor de Riego NDVI | PM CUSTOM",
+    metaDescription:
+      "Sistema predictor de riego basado en imágenes satelitales NDVI. Monitorea el estado vegetativo de polígonos y optimiza el riego según la humedad real del cultivo.",
+    lead: "Predice el riego de tus cultivos con imágenes satelitales NDVI.",
+    body:
+      "Fotos de imágenes satelitales, cuya calidad depende del satélite que se contrate, generan una imagen de polígonos aplicando distintos tipos de filtros. Se visualiza el estado vegetativo del lugar a través de mapas de color: rojo indica zonas bastante secas, verde zonas bastante húmedas. Se llega a una estimación para alcanzar un estado vegetativo óptimo.",
+    benefits: [
+      "Imágenes satelitales de polígonos",
+      "Mapas de color de estado vegetativo",
+      "Estimación de riego óptimo",
+      "Reducción de desperdicio hídrico",
+    ],
+    image: serviceNdvi,
+  },
 ];
 
 export const industries = [
