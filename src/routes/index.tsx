@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { cases, services, industries, pillars, benefitsList, process } from "@/lib/content";
 import heroIot from "@/assets/hero-iot.jpg";
 import { CheckCircle2 } from "lucide-react";
+import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,11 +64,13 @@ function HomePage() {
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-3 self-center">
-            {benefitsList.map((b) => (
-              <li key={b} className="p2-card p-4 flex items-center gap-3">
-                <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0" />
-                <span className="text-sm font-medium text-[var(--p2-white)]">{b}</span>
-              </li>
+            {benefitsList.map((b, i) => (
+              <Reveal key={b} delay={i * 80}>
+                <li className="p2-card p-4 flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--p2-green)]/50">
+                  <CheckCircle2 size={18} className="text-[var(--p2-green)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--p2-white)]">{b}</span>
+                </li>
+              </Reveal>
             ))}
           </ul>
         </div>
@@ -112,16 +115,17 @@ function HomePage() {
             {services.map((s, i) => {
               const to = `/${s.slug}` as "/sistemas-embebidos";
               return (
-                <Link
-                  key={s.slug}
-                  to={to}
-                  className="p2-card p-7 hover:border-[var(--p2-green)] transition-colors group"
-                >
-                  <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
-                  <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
-                  <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
-                  <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
-                </Link>
+                <Reveal key={s.slug} delay={i * 90}>
+                  <Link
+                    to={to}
+                    className="p2-card p-7 h-full block hover:border-[var(--p2-green)] hover:-translate-y-1 transition-all duration-300 group"
+                  >
+                    <div className="text-[var(--p2-green)] text-xs font-bold tracking-[0.22em]">0{i + 1}</div>
+                    <h3 className="mt-3 text-xl font-bold text-[var(--p2-white)]">{s.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--p2-white)]/70 leading-relaxed">{s.lead}</p>
+                    <div className="mt-6 text-xs font-semibold text-[var(--p2-green)] group-hover:translate-x-1 transition-transform inline-block">Ver más →</div>
+                  </Link>
+                </Reveal>
               );
             })}
           </div>
@@ -136,12 +140,17 @@ function HomePage() {
             Cómo transformamos una idea en una <span className="text-[var(--p2-green)]">solución tecnológica</span>.
           </h2>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {process.map((step) => (
-              <div key={step.n} className="p2-card p-6">
-                <div className="text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
-                <h4 className="mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
-                <p className="mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
-              </div>
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 120}>
+                <div className="p2-card p-6 h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:border-[var(--p2-green)]/60">
+                  <div className="absolute -top-6 -right-4 text-[6rem] font-bold p2-display text-[var(--p2-green)]/5 group-hover:text-[var(--p2-green)]/10 transition-colors leading-none pointer-events-none">
+                    {step.n}
+                  </div>
+                  <div className="relative text-[var(--p2-green)] text-2xl font-bold p2-display">{step.n}</div>
+                  <h4 className="relative mt-3 text-lg font-bold text-[var(--p2-white)]">{step.t}</h4>
+                  <p className="relative mt-2 text-sm text-[var(--p2-white)]/65 leading-relaxed">{step.d}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
