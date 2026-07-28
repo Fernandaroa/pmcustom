@@ -9,74 +9,28 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SistemasEmbebidosRouteImport } from './routes/sistemas-embebidos'
-import { Route as SistemaPredictorRiegoNdviRouteImport } from './routes/sistema-predictor-riego-ndvi'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as IotRouteImport } from './routes/iot'
-import { Route as InvestigacionDesarrolloRouteImport } from './routes/investigacion-desarrollo'
-import { Route as IndustriasRouteImport } from './routes/industrias'
-import { Route as DesarrolloProductosRouteImport } from './routes/desarrollo-productos'
-import { Route as ContactoRouteImport } from './routes/contacto'
-import { Route as CasosExitoRouteImport } from './routes/casos-exito'
-import { Route as AutomatizacionIndustrialRouteImport } from './routes/automatizacion-industrial'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AutomatizacionIndustrialRouteImport } from './routes/automatizacion-industrial'
+import { Route as CasosExitoRouteImport } from './routes/casos-exito'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as DesarrolloProductosRouteImport } from './routes/desarrollo-productos'
+import { Route as IndustriasRouteImport } from './routes/industrias'
+import { Route as InvestigacionDesarrolloRouteImport } from './routes/investigacion-desarrollo'
+import { Route as IotRouteImport } from './routes/iot'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as SistemaPredictorRiegoNdviRouteImport } from './routes/sistema-predictor-riego-ndvi'
+import { Route as SistemasEmbebidosRouteImport } from './routes/sistemas-embebidos'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as BlogAplicacionesIotIndustrialRouteImport } from './routes/blog.aplicaciones-iot-industrial'
 import { Route as CasosExitoIndexRouteImport } from './routes/casos-exito.index'
 import { Route as CasosExitoSlugRouteImport } from './routes/casos-exito.$slug'
-import { Route as BlogAplicacionesIotIndustrialRouteImport } from './routes/blog.aplicaciones-iot-industrial'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
-import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SistemasEmbebidosRoute = SistemasEmbebidosRouteImport.update({
-  id: '/sistemas-embebidos',
-  path: '/sistemas-embebidos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SistemaPredictorRiegoNdviRoute =
-  SistemaPredictorRiegoNdviRouteImport.update({
-    id: '/sistema-predictor-riego-ndvi',
-    path: '/sistema-predictor-riego-ndvi',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IotRoute = IotRouteImport.update({
-  id: '/iot',
-  path: '/iot',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InvestigacionDesarrolloRoute = InvestigacionDesarrolloRouteImport.update({
-  id: '/investigacion-desarrollo',
-  path: '/investigacion-desarrollo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndustriasRoute = IndustriasRouteImport.update({
-  id: '/industrias',
-  path: '/industrias',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DesarrolloProductosRoute = DesarrolloProductosRouteImport.update({
-  id: '/desarrollo-productos',
-  path: '/desarrollo-productos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactoRoute = ContactoRouteImport.update({
-  id: '/contacto',
-  path: '/contacto',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasosExitoRoute = CasosExitoRouteImport.update({
-  id: '/casos-exito',
-  path: '/casos-exito',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AutomatizacionIndustrialRoute =
@@ -85,11 +39,75 @@ const AutomatizacionIndustrialRoute =
     path: '/automatizacion-industrial',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CasosExitoRoute = CasosExitoRouteImport.update({
+  id: '/casos-exito',
+  path: '/casos-exito',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesarrolloProductosRoute = DesarrolloProductosRouteImport.update({
+  id: '/desarrollo-productos',
+  path: '/desarrollo-productos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriasRoute = IndustriasRouteImport.update({
+  id: '/industrias',
+  path: '/industrias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestigacionDesarrolloRoute = InvestigacionDesarrolloRouteImport.update({
+  id: '/investigacion-desarrollo',
+  path: '/investigacion-desarrollo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IotRoute = IotRouteImport.update({
+  id: '/iot',
+  path: '/iot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SistemaPredictorRiegoNdviRoute =
+  SistemaPredictorRiegoNdviRouteImport.update({
+    id: '/sistema-predictor-riego-ndvi',
+    path: '/sistema-predictor-riego-ndvi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SistemasEmbebidosRoute = SistemasEmbebidosRouteImport.update({
+  id: '/sistemas-embebidos',
+  path: '/sistemas-embebidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogAplicacionesIotIndustrialRoute =
+  BlogAplicacionesIotIndustrialRouteImport.update({
+    id: '/blog/aplicaciones-iot-industrial',
+    path: '/blog/aplicaciones-iot-industrial',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CasosExitoIndexRoute = CasosExitoIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -100,24 +118,6 @@ const CasosExitoSlugRoute = CasosExitoSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => CasosExitoRoute,
 } as any)
-const BlogAplicacionesIotIndustrialRoute =
-  BlogAplicacionesIotIndustrialRouteImport.update({
-    id: '/blog/aplicaciones-iot-industrial',
-    path: '/blog/aplicaciones-iot-industrial',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotmcpChar93ListToolsRoute =
-  Char91DotmcpChar93ListToolsRouteImport.update({
-    id: '/.mcp/list-tools',
-    path: '/.mcp/list-tools',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const Char91DotmcpChar93InvokeToolToolRoute =
   Char91DotmcpChar93InvokeToolToolRouteImport.update({
     id: '/.mcp/invoke-tool/$tool',
@@ -268,74 +268,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sistemas-embebidos': {
-      id: '/sistemas-embebidos'
-      path: '/sistemas-embebidos'
-      fullPath: '/sistemas-embebidos'
-      preLoaderRoute: typeof SistemasEmbebidosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sistema-predictor-riego-ndvi': {
-      id: '/sistema-predictor-riego-ndvi'
-      path: '/sistema-predictor-riego-ndvi'
-      fullPath: '/sistema-predictor-riego-ndvi'
-      preLoaderRoute: typeof SistemaPredictorRiegoNdviRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/iot': {
-      id: '/iot'
-      path: '/iot'
-      fullPath: '/iot'
-      preLoaderRoute: typeof IotRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/investigacion-desarrollo': {
-      id: '/investigacion-desarrollo'
-      path: '/investigacion-desarrollo'
-      fullPath: '/investigacion-desarrollo'
-      preLoaderRoute: typeof InvestigacionDesarrolloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/industrias': {
-      id: '/industrias'
-      path: '/industrias'
-      fullPath: '/industrias'
-      preLoaderRoute: typeof IndustriasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/desarrollo-productos': {
-      id: '/desarrollo-productos'
-      path: '/desarrollo-productos'
-      fullPath: '/desarrollo-productos'
-      preLoaderRoute: typeof DesarrolloProductosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contacto': {
-      id: '/contacto'
-      path: '/contacto'
-      fullPath: '/contacto'
-      preLoaderRoute: typeof ContactoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casos-exito': {
-      id: '/casos-exito'
-      path: '/casos-exito'
-      fullPath: '/casos-exito'
-      preLoaderRoute: typeof CasosExitoRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/automatizacion-industrial': {
@@ -345,11 +282,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AutomatizacionIndustrialRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/casos-exito': {
+      id: '/casos-exito'
+      path: '/casos-exito'
+      fullPath: '/casos-exito'
+      preLoaderRoute: typeof CasosExitoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desarrollo-productos': {
+      id: '/desarrollo-productos'
+      path: '/desarrollo-productos'
+      fullPath: '/desarrollo-productos'
+      preLoaderRoute: typeof DesarrolloProductosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industrias': {
+      id: '/industrias'
+      path: '/industrias'
+      fullPath: '/industrias'
+      preLoaderRoute: typeof IndustriasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investigacion-desarrollo': {
+      id: '/investigacion-desarrollo'
+      path: '/investigacion-desarrollo'
+      fullPath: '/investigacion-desarrollo'
+      preLoaderRoute: typeof InvestigacionDesarrolloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iot': {
+      id: '/iot'
+      path: '/iot'
+      fullPath: '/iot'
+      preLoaderRoute: typeof IotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistema-predictor-riego-ndvi': {
+      id: '/sistema-predictor-riego-ndvi'
+      path: '/sistema-predictor-riego-ndvi'
+      fullPath: '/sistema-predictor-riego-ndvi'
+      preLoaderRoute: typeof SistemaPredictorRiegoNdviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistemas-embebidos': {
+      id: '/sistemas-embebidos'
+      path: '/sistemas-embebidos'
+      fullPath: '/sistemas-embebidos'
+      preLoaderRoute: typeof SistemasEmbebidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/aplicaciones-iot-industrial': {
+      id: '/blog/aplicaciones-iot-industrial'
+      path: '/blog/aplicaciones-iot-industrial'
+      fullPath: '/blog/aplicaciones-iot-industrial'
+      preLoaderRoute: typeof BlogAplicacionesIotIndustrialRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos-exito/': {
@@ -365,27 +386,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/casos-exito/$slug'
       preLoaderRoute: typeof CasosExitoSlugRouteImport
       parentRoute: typeof CasosExitoRoute
-    }
-    '/blog/aplicaciones-iot-industrial': {
-      id: '/blog/aplicaciones-iot-industrial'
-      path: '/blog/aplicaciones-iot-industrial'
-      fullPath: '/blog/aplicaciones-iot-industrial'
-      preLoaderRoute: typeof BlogAplicacionesIotIndustrialRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/list-tools': {
-      id: '/.mcp/list-tools'
-      path: '/.mcp/list-tools'
-      fullPath: '/.mcp/list-tools'
-      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/.mcp/invoke-tool/$tool': {
       id: '/.mcp/invoke-tool/$tool'
