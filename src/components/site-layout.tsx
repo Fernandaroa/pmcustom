@@ -140,11 +140,12 @@ function SiteHeader() {
                   <div className="pb-3 pl-2 flex flex-col gap-1">
                     {g.items.map((item) => (
                       <Link
-                        key={item.to}
+                        key={item.href}
                         to={item.to}
+                        params={item.params}
                         onClick={() => setOpen(false)}
                         className={`py-2 text-sm ${
-                          isActive(pathname, item.to) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/70 hover:text-[var(--p2-green)]"
+                          isActive(pathname, item.href) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/70 hover:text-[var(--p2-green)]"
                         }`}
                       >
                         {item.label}
