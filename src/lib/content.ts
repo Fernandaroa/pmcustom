@@ -177,7 +177,7 @@ export const services: ServicePage[] = [
       "Sistema predictor de riego basado en imágenes satelitales NDVI. Monitorea el estado vegetativo de polígonos y optimiza el riego según la humedad real del cultivo.",
     lead: "Predice el riego de tus cultivos con imágenes satelitales NDVI.",
     body:
-      "Fotos de imágenes satelitales, cuya calidad depende del satélite que se contrate, generan una imagen de polígonos aplicando distintos tipos de filtros. Se visualiza el estado vegetativo del lugar a través de mapas de color: rojo indica zonas bastante secas, verde zonas bastante húmedas. Se llega a una estimación para alcanzar un estado vegetativo óptimo.",
+      "Sistema web para predicción y recomendaciones de riego mediante imágenes satelitales las cuales a tráves de la generación de polígonos en distintas superficies y aplicando distintos tipos de filtros se visualiza el estado vegetativo del lugar a través de mapas de color:\n- Rojo: indica zonas bastante secas\n- Verde: indica zonas bastante húmedas\nCon esto se llega a una estimación para alcanzar un estado vegetativo óptimo.",
     benefits: [
       "Imágenes satelitales de polígonos",
       "Mapas de color de estado vegetativo",
