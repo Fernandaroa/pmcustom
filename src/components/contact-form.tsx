@@ -12,6 +12,7 @@ const schema = z.object({
   company: z.string().trim().min(1, "Empresa requerida").max(120),
   email: z.string().trim().email("Email inválido").max(150),
   phone: z.string().trim().max(30).optional().or(z.literal("")),
+  details: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
 export function ContactForm({ variant: _variant }: Props) {
