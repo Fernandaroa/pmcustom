@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Anyone can submit contact" ON public.contact_submissions;
+CREATE POLICY "Anyone can submit contact" ON public.contact_submissions FOR INSERT TO anon, authenticated WITH CHECK (name IS NOT NULL AND length(name) > 0 AND email IS NOT NULL AND length(email) > 0);

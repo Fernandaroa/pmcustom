@@ -12,10 +12,11 @@ const schema = z.object({
   company: z.string().trim().min(1, "Empresa requerida").max(120),
   email: z.string().trim().email("Email inválido").max(150),
   phone: z.string().trim().max(30).optional().or(z.literal("")),
+  details: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
 export function ContactForm({ variant: _variant }: Props) {
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "" });
+  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", details: "" });
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e: FormEvent) => {
@@ -31,6 +32,7 @@ export function ContactForm({ variant: _variant }: Props) {
       company: parsed.data.company,
       email: parsed.data.email,
       phone: parsed.data.phone || null,
+      details: parsed.data.details || null,
     });
     setLoading(false);
     if (error) {
@@ -38,7 +40,7 @@ export function ContactForm({ variant: _variant }: Props) {
       return;
     }
     toast.success("¡Gracias! Te contactaremos pronto.");
-    setForm({ name: "", company: "", email: "", phone: "" });
+    setForm({ name: "", company: "", email: "", phone: "", details: "" });
   };
 
   return (
@@ -81,6 +83,14 @@ export function ContactForm({ variant: _variant }: Props) {
         value={form.phone}
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         maxLength={30}
+      />
+      <textarea
+        className="p2-input min-h-[120px] resize-y"
+        placeholder="Cuéntanos sobre tu proyecto o solicitud (opcional)"
+        aria-label="Detalles del proyecto"
+        value={form.details}
+        onChange={(e) => setForm({ ...form, details: e.target.value })}
+        maxLength={1000}
       />
       <div>
         <button type="submit" className="p2-btn" disabled={loading}>
