@@ -15,7 +15,7 @@ export function ServicePageView({ service, extra }: { service: ServiceData; extr
               {service.title}
             </h1>
             <p className="mt-6 text-lg text-[var(--p2-white)]/80 leading-relaxed">{service.lead}</p>
-            <p className="mt-4 text-base text-[var(--p2-white)]/70 leading-relaxed">{service.body}</p>
+            <p className="mt-4 text-base text-[var(--p2-white)]/70 leading-relaxed whitespace-pre-line">{service.body}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contacto" className="p2-btn">Evaluar mi proyecto →</Link>
               <Link to="/casos-exito" className="p2-btn-ghost">Ver casos de éxito</Link>
