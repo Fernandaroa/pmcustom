@@ -84,6 +84,14 @@ export function ContactForm({ variant: _variant }: Props) {
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         maxLength={30}
       />
+      <textarea
+        className="p2-input min-h-[120px] resize-y"
+        placeholder="Cuéntanos sobre tu proyecto o solicitud (opcional)"
+        aria-label="Detalles del proyecto"
+        value={form.details}
+        onChange={(e) => setForm({ ...form, details: e.target.value })}
+        maxLength={1000}
+      />
       <div>
         <button type="submit" className="p2-btn" disabled={loading}>
           {loading ? "Enviando..." : "Enviar"} <span>→</span>
