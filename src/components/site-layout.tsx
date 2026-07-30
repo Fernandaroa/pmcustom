@@ -188,8 +188,8 @@ function SiteFooter() {
         <div>
           <div className="p2-eyebrow mb-4">Productos</div>
           <ul className="space-y-2">
-            <li><Link to="/casos-exito/nodo-riego-controlador" className="hover:text-[var(--p2-green)]">Sistema de riego automatizado IoT</Link></li>
-            <li><Link to="/casos-exito/data-logger" className="hover:text-[var(--p2-green)]">Data Logger Inteligente</Link></li>
+            <li><Link to="/casos-exito/$slug" params={{ slug: "nodo-riego-controlador" }} className="hover:text-[var(--p2-green)]">Sistema de riego automatizado IoT</Link></li>
+            <li><Link to="/casos-exito/$slug" params={{ slug: "data-logger" }} className="hover:text-[var(--p2-green)]">Data Logger Inteligente</Link></li>
             <li><Link to="/sistema-predictor-riego-ndvi" className="hover:text-[var(--p2-green)]">Predictor de Riego NDVI</Link></li>
           </ul>
         </div>
