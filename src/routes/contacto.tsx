@@ -20,6 +20,22 @@ export const Route = createFileRoute("/contacto")({
       { property: "og:url", content: "/contacto" },
     ],
     links: [{ rel: "canonical", href: "/contacto" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contacto PM CUSTOM",
+          url: "/contacto",
+          about: {
+            "@type": "Organization",
+            name: "PM CUSTOM",
+            areaServed: "CL",
+          },
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });

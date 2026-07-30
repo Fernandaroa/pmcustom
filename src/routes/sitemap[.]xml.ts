@@ -22,6 +22,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/automatizacion-industrial", changefreq: "monthly", priority: "0.8" },
           { path: "/desarrollo-productos", changefreq: "monthly", priority: "0.8" },
           { path: "/investigacion-desarrollo", changefreq: "monthly", priority: "0.8" },
+          { path: "/sistema-predictor-riego-ndvi", changefreq: "monthly", priority: "0.8" },
           { path: "/casos-exito", changefreq: "monthly", priority: "0.7" },
           ...cases.map((c) => ({ path: `/casos-exito/${c.slug}`, changefreq: "monthly" as const, priority: "0.6" })),
           { path: "/industrias", changefreq: "monthly", priority: "0.7" },
