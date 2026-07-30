@@ -3,26 +3,43 @@ import { useState, type ReactNode } from "react";
 import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const navGroups = [
+type NavItem = {
+  to: string;
+  params?: Record<string, string>;
+  href: string;
+  label: string;
+};
+
+const navGroups: { label: string; items: NavItem[] }[] = [
   {
     label: "Productos",
     items: [
-      { to: "/casos-exito/nodo-riego-controlador", label: "Sistema de riego automatizado IoT" },
-      { to: "/casos-exito/data-logger", label: "Data Logger Inteligente" },
-      { to: "/sistema-predictor-riego-ndvi", label: "Índice NDVI" },
+      {
+        to: "/casos-exito/$slug",
+        params: { slug: "nodo-riego-controlador" },
+        href: "/casos-exito/nodo-riego-controlador",
+        label: "Sistema de riego automatizado IoT",
+      },
+      {
+        to: "/casos-exito/$slug",
+        params: { slug: "data-logger" },
+        href: "/casos-exito/data-logger",
+        label: "Data Logger Inteligente",
+      },
+      { to: "/sistema-predictor-riego-ndvi", href: "/sistema-predictor-riego-ndvi", label: "Índice NDVI" },
     ],
   },
   {
     label: "Servicios",
     items: [
-      { to: "/sistemas-embebidos", label: "Sistemas Embebidos" },
-      { to: "/iot", label: "Soluciones IoT" },
-      { to: "/automatizacion-industrial", label: "Automatización Industrial" },
-      { to: "/desarrollo-productos", label: "Desarrollo de Productos" },
-      { to: "/investigacion-desarrollo", label: "I+D · CORFO" },
+      { to: "/sistemas-embebidos", href: "/sistemas-embebidos", label: "Sistemas Embebidos" },
+      { to: "/iot", href: "/iot", label: "Soluciones IoT" },
+      { to: "/automatizacion-industrial", href: "/automatizacion-industrial", label: "Automatización Industrial" },
+      { to: "/desarrollo-productos", href: "/desarrollo-productos", label: "Desarrollo de Productos" },
+      { to: "/investigacion-desarrollo", href: "/investigacion-desarrollo", label: "I+D · CORFO" },
     ],
   },
-] as const;
+];
 
 const topLinks = [
   { to: "/casos-exito", label: "Casos de éxito" },
