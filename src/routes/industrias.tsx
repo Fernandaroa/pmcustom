@@ -20,6 +20,7 @@ export const Route = createFileRoute("/industrias")({
       },
       { property: "og:url", content: "/industrias" },
       { property: "og:image", content: industriesHero },
+      { name: "twitter:image", content: industriesHero },
     ],
     links: [{ rel: "canonical", href: "/industrias" }],
   }),

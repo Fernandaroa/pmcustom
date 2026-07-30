@@ -19,6 +19,7 @@ export const Route = createFileRoute("/blog/aplicaciones-iot-industrial")({
       { property: "og:url", content: PATH },
       { property: "og:type", content: "article" },
       { property: "og:image", content: heroIot },
+      { name: "twitter:image", content: heroIot },
     ],
     links: [{ rel: "canonical", href: PATH }],
     scripts: [

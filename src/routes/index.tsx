@@ -8,6 +8,12 @@ import { Reveal } from "@/components/reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { title: "Sistemas Embebidos e IoT para Empresas | PM CUSTOM Chile" },
+      {
+        name: "description",
+        content:
+          "Sistemas embebidos, IoT y automatización industrial a medida en Chile. Datos en tiempo real, control operacional y eficiencia para tu operación.",
+      },
       { property: "og:title", content: "Sistemas Embebidos e IoT para Empresas | PM CUSTOM Chile" },
       {
         property: "og:description",
@@ -16,6 +22,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
       { property: "og:image", content: heroIot },
+      { name: "twitter:image", content: heroIot },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
