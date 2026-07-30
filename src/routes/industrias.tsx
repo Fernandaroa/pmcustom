@@ -11,7 +11,7 @@ export const Route = createFileRoute("/industrias")({
       {
         name: "description",
         content:
-          "Soluciones tecnológicas para agricultura, minería, manufactura, energía, industria y logística. Tecnología a medida para cada operación.",
+          "Soluciones tecnológicas para agricultura, minería, manufactura, energía, alimentos y logística. Tecnología a medida para cada operación.",
       },
       { property: "og:title", content: "Industrias | PM CUSTOM" },
       {

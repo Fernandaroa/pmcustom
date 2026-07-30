@@ -191,7 +191,7 @@ export const services: ServicePage[] = [
 export const industries = [
   { name: "Agricultura", description: "Monitoreo de cultivos, riego inteligente y gestión de recursos." },
   { name: "Minería", description: "Captura de datos operacionales y monitoreo remoto de activos." },
-  { name: "Industria", description: "Automatización y optimización de procesos productivos." },
+  { name: "Alimentos", description: "Automatización, trazabilidad y control de procesos productivos en la industria alimentaria." },
   { name: "Manufactura", description: "Control de variables críticas y trazabilidad." },
   { name: "Energía", description: "Monitoreo de infraestructura y gestión de datos." },
   { name: "Logística", description: "Seguimiento de activos y control operacional." },
