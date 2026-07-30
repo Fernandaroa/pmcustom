@@ -11,7 +11,7 @@ export const Route = createFileRoute("/casos-exito/")({
       {
         name: "description",
         content:
-          "Más de 5 hectáreas automatizadas, 3.000+ dispositivos en terreno y 20% de mejora productiva. PM CUSTOM opera con tecnología propia en Chile, España y Portugal.",
+          "Más de 5.000 hectáreas automatizadas entre Chile, España y Portugal, con 3.000+ dispositivos en terreno y tecnología propia de PM CUSTOM.",
       },
       { property: "og:title", content: "Casos de éxito | PM CUSTOM" },
       {
@@ -40,13 +40,13 @@ function CasesIndex() {
       icon: Sprout,
       metric: (
         <>
-          <AnimatedCounter to={5} />
+          <AnimatedCounter to={5000} duration={2200} />
           <span className="text-[var(--p2-green)]">+</span>
           <span className="text-[0.5em] align-top ml-2 text-[var(--p2-white)]/60 tracking-normal">ha</span>
         </>
       ),
       title: "Hectáreas automatizadas",
-      body: "En 2026 hemos automatizado más de 5 hectáreas de cultivo entre Chile, España y Portugal, integrando riego, sensores y control remoto.",
+      body: "En 2026 hemos automatizado más de 5.000 hectáreas de cultivo: 3.500 en Chile, 850 en Portugal y 950 en España, integrando riego, sensores y control remoto.",
     },
     {
       kicker: "Presencia internacional",
