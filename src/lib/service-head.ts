@@ -9,6 +9,8 @@ export function buildServiceHead(service: ServicePage, path: string) {
       { property: "og:description", content: service.metaDescription },
       { property: "og:url", content: path },
       { property: "og:image", content: service.image },
+      { name: "twitter:image", content: service.image },
+      { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: path }],
     scripts: [
