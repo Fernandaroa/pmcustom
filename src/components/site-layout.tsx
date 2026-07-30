@@ -3,26 +3,43 @@ import { useState, type ReactNode } from "react";
 import pmcustomLogo from "@/assets/pmcustom-logo.png.asset.json";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const navGroups = [
+type NavItem = {
+  to: string;
+  params?: Record<string, string>;
+  href: string;
+  label: string;
+};
+
+const navGroups: { label: string; items: NavItem[] }[] = [
   {
     label: "Productos",
     items: [
-      { to: "/casos-exito/nodo-riego-controlador", label: "Sistema de riego automatizado IoT" },
-      { to: "/casos-exito/data-logger", label: "Data Logger Inteligente" },
-      { to: "/sistema-predictor-riego-ndvi", label: "Índice NDVI" },
+      {
+        to: "/casos-exito/$slug",
+        params: { slug: "nodo-riego-controlador" },
+        href: "/casos-exito/nodo-riego-controlador",
+        label: "Sistema de riego automatizado IoT",
+      },
+      {
+        to: "/casos-exito/$slug",
+        params: { slug: "data-logger" },
+        href: "/casos-exito/data-logger",
+        label: "Data Logger Inteligente",
+      },
+      { to: "/sistema-predictor-riego-ndvi", href: "/sistema-predictor-riego-ndvi", label: "Índice NDVI" },
     ],
   },
   {
     label: "Servicios",
     items: [
-      { to: "/sistemas-embebidos", label: "Sistemas Embebidos" },
-      { to: "/iot", label: "Soluciones IoT" },
-      { to: "/automatizacion-industrial", label: "Automatización Industrial" },
-      { to: "/desarrollo-productos", label: "Desarrollo de Productos" },
-      { to: "/investigacion-desarrollo", label: "I+D · CORFO" },
+      { to: "/sistemas-embebidos", href: "/sistemas-embebidos", label: "Sistemas Embebidos" },
+      { to: "/iot", href: "/iot", label: "Soluciones IoT" },
+      { to: "/automatizacion-industrial", href: "/automatizacion-industrial", label: "Automatización Industrial" },
+      { to: "/desarrollo-productos", href: "/desarrollo-productos", label: "Desarrollo de Productos" },
+      { to: "/investigacion-desarrollo", href: "/investigacion-desarrollo", label: "I+D · CORFO" },
     ],
   },
-] as const;
+];
 
 const topLinks = [
   { to: "/casos-exito", label: "Casos de éxito" },
@@ -46,7 +63,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 bg-[var(--p2-black)]/90 backdrop-blur border-b border-[var(--p2-line)]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:flex lg:items-center lg:justify-between">
         <Link to="/" className="flex items-center gap-3 min-w-0">
-          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-7 w-auto shrink-0" />
+          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-9 w-auto shrink-0" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-[var(--p2-white)]/85">
@@ -60,10 +77,11 @@ function SiteHeader() {
                 <div className="bg-[var(--p2-surface)] border border-[var(--p2-line)] rounded-xl shadow-xl p-3 min-w-[260px]">
                   {g.items.map((item) => (
                     <Link
-                      key={item.to}
+                      key={item.href}
                       to={item.to}
+                      params={item.params}
                       className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
-                        isActive(pathname, item.to)
+                        isActive(pathname, item.href)
                           ? "text-[var(--p2-green)] bg-[var(--p2-green)]/10"
                           : "text-[var(--p2-white)]/80 hover:text-[var(--p2-green)] hover:bg-[var(--p2-green)]/10"
                       }`}
@@ -122,11 +140,12 @@ function SiteHeader() {
                   <div className="pb-3 pl-2 flex flex-col gap-1">
                     {g.items.map((item) => (
                       <Link
-                        key={item.to}
+                        key={item.href}
                         to={item.to}
+                        params={item.params}
                         onClick={() => setOpen(false)}
                         className={`py-2 text-sm ${
-                          isActive(pathname, item.to) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/70 hover:text-[var(--p2-green)]"
+                          isActive(pathname, item.href) ? "text-[var(--p2-green)]" : "text-[var(--p2-white)]/70 hover:text-[var(--p2-green)]"
                         }`}
                       >
                         {item.label}
@@ -169,8 +188,8 @@ function SiteFooter() {
         <div>
           <div className="p2-eyebrow mb-4">Productos</div>
           <ul className="space-y-2">
-            <li><Link to="/casos-exito/nodo-riego-controlador" className="hover:text-[var(--p2-green)]">Sistema de riego automatizado IoT</Link></li>
-            <li><Link to="/casos-exito/data-logger" className="hover:text-[var(--p2-green)]">Data Logger Inteligente</Link></li>
+            <li><Link to="/casos-exito/$slug" params={{ slug: "nodo-riego-controlador" }} className="hover:text-[var(--p2-green)]">Sistema de riego automatizado IoT</Link></li>
+            <li><Link to="/casos-exito/$slug" params={{ slug: "data-logger" }} className="hover:text-[var(--p2-green)]">Data Logger Inteligente</Link></li>
             <li><Link to="/sistema-predictor-riego-ndvi" className="hover:text-[var(--p2-green)]">Predictor de Riego NDVI</Link></li>
           </ul>
         </div>
