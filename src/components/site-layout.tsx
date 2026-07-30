@@ -77,10 +77,11 @@ function SiteHeader() {
                 <div className="bg-[var(--p2-surface)] border border-[var(--p2-line)] rounded-xl shadow-xl p-3 min-w-[260px]">
                   {g.items.map((item) => (
                     <Link
-                      key={item.to}
+                      key={item.href}
                       to={item.to}
+                      params={item.params}
                       className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
-                        isActive(pathname, item.to)
+                        isActive(pathname, item.href)
                           ? "text-[var(--p2-green)] bg-[var(--p2-green)]/10"
                           : "text-[var(--p2-white)]/80 hover:text-[var(--p2-green)] hover:bg-[var(--p2-green)]/10"
                       }`}
