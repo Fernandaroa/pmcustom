@@ -16,7 +16,7 @@ const schema = z.object({
 });
 
 export function ContactForm({ variant: _variant }: Props) {
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "" });
+  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", details: "" });
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e: FormEvent) => {
