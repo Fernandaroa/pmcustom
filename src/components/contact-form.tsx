@@ -32,6 +32,7 @@ export function ContactForm({ variant: _variant }: Props) {
       company: parsed.data.company,
       email: parsed.data.email,
       phone: parsed.data.phone || null,
+      details: parsed.data.details || null,
     });
     setLoading(false);
     if (error) {
@@ -39,7 +40,7 @@ export function ContactForm({ variant: _variant }: Props) {
       return;
     }
     toast.success("¡Gracias! Te contactaremos pronto.");
-    setForm({ name: "", company: "", email: "", phone: "" });
+    setForm({ name: "", company: "", email: "", phone: "", details: "" });
   };
 
   return (
