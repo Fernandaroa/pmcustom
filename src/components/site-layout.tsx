@@ -63,7 +63,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 bg-[var(--p2-black)]/90 backdrop-blur border-b border-[var(--p2-line)]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:flex lg:items-center lg:justify-between">
         <Link to="/" className="flex items-center gap-3 min-w-0">
-          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-9 w-auto shrink-0" />
+          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-10 w-auto shrink-0" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-[var(--p2-white)]/85">
@@ -180,7 +180,7 @@ function SiteFooter() {
     <footer className="border-t border-[var(--p2-line)] bg-[var(--p2-surface)] mt-20">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-14 grid md:grid-cols-4 gap-10 text-sm">
         <div>
-          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-8 w-auto mb-4" />
+          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-10 w-auto mb-4" />
           <p className="text-[var(--p2-muted)] leading-relaxed">
             Partner tecnológico en sistemas embebidos, IoT y automatización para industrias en Chile y Latinoamérica.
           </p>
