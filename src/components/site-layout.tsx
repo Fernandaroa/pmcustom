@@ -180,7 +180,7 @@ function SiteFooter() {
     <footer className="border-t border-[var(--p2-line)] bg-[var(--p2-surface)] mt-20">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-14 grid md:grid-cols-4 gap-10 text-sm">
         <div>
-          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-10 w-auto mb-4" />
+          <img src={pmcustomLogo.url} alt="PM CUSTOM" className="h-12 w-auto mb-4" />
           <p className="text-[var(--p2-muted)] leading-relaxed">
             Partner tecnológico en sistemas embebidos, IoT y automatización para industrias en Chile y Latinoamérica.
           </p>
