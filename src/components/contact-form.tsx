@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyContact } from "@/lib/notify.functions";
 
 interface Props {
   variant: "p1" | "p2";
