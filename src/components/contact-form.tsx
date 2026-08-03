@@ -40,6 +40,15 @@ export function ContactForm({ variant: _variant }: Props) {
       toast.error("No pudimos enviar tu mensaje. Intenta nuevamente.");
       return;
     }
+    void notifyContact({
+      data: {
+        name: parsed.data.name,
+        company: parsed.data.company,
+        email: parsed.data.email,
+        phone: parsed.data.phone || null,
+        details: parsed.data.details || null,
+      },
+    }).catch((err) => console.error("No se pudo enviar la notificación:", err));
     toast.success("¡Gracias! Te contactaremos pronto.");
     setForm({ name: "", company: "", email: "", phone: "", details: "" });
   };
