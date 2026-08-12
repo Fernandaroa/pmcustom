@@ -90,16 +90,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-8EY07ZRHFP",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-TJ1JBBR0ET",
       },
       {
         children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-8EY07ZRHFP');`,
+gtag('config', 'G-TJ1JBBR0ET');`,
       },
       {
-        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WLC94R79');`,
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M8C6H574');`,
       },
       {
         type: "application/ld+json",
@@ -139,7 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WLC94R79"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M8C6H574"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
