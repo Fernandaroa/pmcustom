@@ -139,7 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WLC94R79"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M8C6H574"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
