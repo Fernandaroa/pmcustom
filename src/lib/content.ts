@@ -2,6 +2,7 @@ import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import dataLogger from "@/assets/data-logger-pmcustom.jpg.asset.json";
 import sistemaRiego from "@/assets/sistema-riego-iot.jpg.asset.json";
+import solucionesIot from "@/assets/soluciones-iot.jpg.asset.json";
 import pillarServices from "@/assets/pillar-services.jpg";
 import pillarProducts from "@/assets/pillar-products.jpg";
 import pillarCorfo from "@/assets/pillar-corfo.jpg";
