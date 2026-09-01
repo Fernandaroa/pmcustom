@@ -121,7 +121,7 @@ export const services: ServicePage[] = [
       "Alertas y automatizaciones",
       "Escalable a miles de dispositivos",
     ],
-    image: pillarProducts,
+    image: solucionesIot.url,
   },
   {
     slug: "automatizacion-industrial",
