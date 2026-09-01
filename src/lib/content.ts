@@ -1,6 +1,7 @@
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
+import dataLogger from "@/assets/data-logger-pmcustom.jpg.asset.json";
 import pillarServices from "@/assets/pillar-services.jpg";
 import pillarProducts from "@/assets/pillar-products.jpg";
 import pillarCorfo from "@/assets/pillar-corfo.jpg";
@@ -45,7 +46,7 @@ export const cases: CaseStudy[] = [
       "Integración de múltiples variables",
       "Mejor toma de decisiones",
     ],
-    image: work3,
+    image: dataLogger.url,
   },
 ];
 
@@ -67,7 +68,7 @@ export const products: Product[] = [
     slug: "data-logger",
     title: "Data Logger Inteligente",
     short: "Captura, almacena y visualiza datos multi-sensor en dashboard en tiempo real.",
-    image: work3,
+    image: dataLogger.url,
   },
   {
     slug: "sistema-predictor-riego-ndvi",
