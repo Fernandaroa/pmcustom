@@ -2,6 +2,7 @@ import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import dataLogger from "@/assets/data-logger-pmcustom.jpg.asset.json";
+import sistemaRiego from "@/assets/sistema-riego-iot.jpg.asset.json";
 import pillarServices from "@/assets/pillar-services.jpg";
 import pillarProducts from "@/assets/pillar-products.jpg";
 import pillarCorfo from "@/assets/pillar-corfo.jpg";
@@ -32,7 +33,7 @@ export const cases: CaseStudy[] = [
       "Mayor eficiencia hídrica y menor intervención manual",
       "Escalabilidad y cobertura por sectores",
     ],
-    image: work1,
+    image: sistemaRiego.url,
   },
   {
     slug: "data-logger",
@@ -62,7 +63,7 @@ export const products: Product[] = [
     slug: "nodo-riego-controlador",
     title: "Sistema de riego automatizado IoT",
     short: "Producto integrado: controlador central en la nube + nodos autónomos LoRa por sectores.",
-    image: work1,
+    image: sistemaRiego.url,
   },
   {
     slug: "data-logger",
