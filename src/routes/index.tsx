@@ -164,8 +164,8 @@ function HomePage() {
                   to="/sistema-predictor-riego-ndvi"
                   className="p2-card group overflow-hidden flex flex-col"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="aspect-[4/3] overflow-hidden bg-[var(--p2-surface-2)]">
+                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-bold text-[var(--p2-white)]">{p.title}</h3>
