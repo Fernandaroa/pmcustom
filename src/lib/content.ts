@@ -159,7 +159,7 @@ export const services: ServicePage[] = [
       "Manufactura piloto y escalado",
       "Soporte y mejora continua",
     ],
-    image: pillarServices,
+    image: desarrolloProductos,
   },
   {
     slug: "investigacion-desarrollo",
