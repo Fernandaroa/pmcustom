@@ -1,15 +1,21 @@
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
-import dataLogger from "@/assets/data-logger-pmcustom.jpg.asset.json";
-import sistemaRiego from "@/assets/sistema-riego-iot.jpg.asset.json";
+import dataLoggerAsset from "@/assets/data-logger-mineria.png.asset.json";
+import sistemaRiego from "@/assets/riego-invernadero.png.asset.json";
 import solucionesIot from "@/assets/soluciones-iot.jpg.asset.json";
 import pillarServices from "@/assets/pillar-services.jpg";
 import pillarProducts from "@/assets/pillar-products.jpg";
 import pillarCorfo from "@/assets/pillar-corfo.jpg";
-import serviceEmbedded from "@/assets/service-embedded.jpg";
+import serviceEmbeddedAsset from "@/assets/sistema-embebido.jpg.asset.json";
 import serviceAutomation from "@/assets/service-automation.jpg";
-import serviceRd from "@/assets/service-rd.jpg";
+import serviceRdAsset from "@/assets/investigacion-desarrollo.png.asset.json";
+import desarrolloProductosAsset from "@/assets/desarrollo-productos.png.asset.json";
 import serviceNdvi from "@/assets/service-ndvi.jpg";
+
+const dataLogger = { url: dataLoggerAsset.url };
+const serviceEmbedded = serviceEmbeddedAsset.url;
+const serviceRd = serviceRdAsset.url;
+const desarrolloProductos = desarrolloProductosAsset.url;
 
 export type CaseStudy = {
   slug: string;
@@ -153,7 +159,7 @@ export const services: ServicePage[] = [
       "Manufactura piloto y escalado",
       "Soporte y mejora continua",
     ],
-    image: pillarServices,
+    image: desarrolloProductos,
   },
   {
     slug: "investigacion-desarrollo",
