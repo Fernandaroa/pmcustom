@@ -3,9 +3,9 @@ import work3 from "@/assets/work-3.jpg";
 import dataLoggerAsset from "@/assets/data-logger-mineria.png.asset.json";
 import sistemaRiego from "@/assets/riego-invernadero.png.asset.json";
 import solucionesIot from "@/assets/soluciones-iot.jpg.asset.json";
-import pillarServices from "@/assets/pillar-services.jpg";
-import pillarProducts from "@/assets/pillar-products.jpg";
-import pillarCorfo from "@/assets/pillar-corfo.jpg";
+import seguridadAsset from "@/assets/seguridad.png.asset.json";
+import robustezAsset from "@/assets/robustez.png.asset.json";
+import usabilidadAsset from "@/assets/usabilidad.png.asset.json";
 import serviceEmbeddedAsset from "@/assets/sistema-embebido.jpg.asset.json";
 import serviceAutomation from "@/assets/service-automation.jpg";
 import serviceRdAsset from "@/assets/investigacion-desarrollo.png.asset.json";
@@ -210,19 +210,19 @@ export const pillars = [
     title: "Seguridad",
     description:
       "Diseñamos soluciones tecnológicas robustas y seguras utilizando protocolos industriales, actualizaciones permanentes y altos estándares de desarrollo que protegen la información y garantizan la continuidad operacional.",
-    image: pillarServices,
+    image: seguridadAsset.url,
   },
   {
     title: "Robustez",
     description:
       "Nuestros dispositivos están preparados para operar en entornos exigentes como agricultura, minería e industria, asegurando estabilidad, disponibilidad de datos y funcionamiento continuo.",
-    image: pillarProducts,
+    image: robustezAsset.url,
   },
   {
     title: "Usabilidad",
     description:
       "Creamos tecnología pensada para las personas. Soluciones intuitivas, fáciles de implementar y diseñadas para integrarse rápidamente a las operaciones de cada cliente.",
-    image: pillarCorfo,
+    image: usabilidadAsset.url,
   },
 ];
 
