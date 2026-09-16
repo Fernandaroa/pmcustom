@@ -1,21 +1,21 @@
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
-import dataLoggerAsset from "@/assets/data-logger-mineria.png.asset.json";
-import sistemaRiego from "@/assets/riego-invernadero.png.asset.json";
-import solucionesIot from "@/assets/soluciones-iot.jpg.asset.json";
-import seguridadAsset from "@/assets/seguridad.png.asset.json";
-import robustezAsset from "@/assets/robustez.png.asset.json";
-import usabilidadAsset from "@/assets/usabilidad.png.asset.json";
-import serviceEmbeddedAsset from "@/assets/sistema-embebido.jpg.asset.json";
+import dataLoggerAsset from "@/assets/data-logger-mineria.png";
+import sistemaRiego from "@/assets/riego-invernadero.webp";
+import solucionesIot from "@/assets/soluciones-iot.png";
+import seguridadAsset from "@/assets/seguridad.png";
+import robustezAsset from "@/assets/robustez.png";
+import usabilidadAsset from "@/assets/usabilidad.png";
+import serviceEmbeddedAsset from "@/assets/sistema-embebido.jpg";
 import serviceAutomation from "@/assets/service-automation.jpg";
-import serviceRdAsset from "@/assets/investigacion-desarrollo.png.asset.json";
-import desarrolloProductosAsset from "@/assets/desarrollo-productos.png.asset.json";
+import serviceRdAsset from "@/assets/investigacion-desarrollo.png";
+import desarrolloProductosAsset from "@/assets/desarrollo-productos.png";
 import serviceNdvi from "@/assets/service-ndvi.jpg";
 
-const dataLogger = { url: dataLoggerAsset.url };
-const serviceEmbedded = serviceEmbeddedAsset.url;
-const serviceRd = serviceRdAsset.url;
-const desarrolloProductos = desarrolloProductosAsset.url;
+const dataLogger = { url: dataLoggerAsset };
+const serviceEmbedded = serviceEmbeddedAsset;
+const serviceRd = serviceRdAsset;
+const desarrolloProductos = desarrolloProductosAsset;
 
 export type CaseStudy = {
   slug: string;
@@ -39,7 +39,7 @@ export const cases: CaseStudy[] = [
       "Mayor eficiencia hídrica y menor intervención manual",
       "Escalabilidad y cobertura por sectores",
     ],
-    image: sistemaRiego.url,
+    image: sistemaRiego,
   },
   {
     slug: "data-logger",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     slug: "nodo-riego-controlador",
     title: "Sistema de riego automatizado IoT",
     short: "Producto integrado: controlador central en la nube + nodos autónomos LoRa por sectores.",
-    image: sistemaRiego.url,
+    image: sistemaRiego,
   },
   {
     slug: "data-logger",
@@ -127,7 +127,7 @@ export const services: ServicePage[] = [
       "Alertas y automatizaciones",
       "Escalable a miles de dispositivos",
     ],
-    image: solucionesIot.url,
+    image: solucionesIot,
   },
   {
     slug: "automatizacion-industrial",
@@ -210,19 +210,19 @@ export const pillars = [
     title: "Seguridad",
     description:
       "Diseñamos soluciones tecnológicas robustas y seguras utilizando protocolos industriales, actualizaciones permanentes y altos estándares de desarrollo que protegen la información y garantizan la continuidad operacional.",
-    image: seguridadAsset.url,
+    image: seguridadAsset,
   },
   {
     title: "Robustez",
     description:
       "Nuestros dispositivos están preparados para operar en entornos exigentes como agricultura, minería e industria, asegurando estabilidad, disponibilidad de datos y funcionamiento continuo.",
-    image: robustezAsset.url,
+    image: robustezAsset,
   },
   {
     title: "Usabilidad",
     description:
       "Creamos tecnología pensada para las personas. Soluciones intuitivas, fáciles de implementar y diseñadas para integrarse rápidamente a las operaciones de cada cliente.",
-    image: usabilidadAsset.url,
+    image: usabilidadAsset,
   },
 ];
 
